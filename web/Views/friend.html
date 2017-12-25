@@ -1,0 +1,76 @@
+<html class="ng-scope">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>分享赚钱</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!--頁面使用REM JS-->
+
+	<script src="../content/js/rem.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!-- ngIf: !mainCtrl.hideAccountCss -->
+    <link rel="stylesheet" href="../content/css/account.css">
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+</head>
+
+    <body style="font-size: 12px;">
+        <div class="layout">
+            <!-- uiView:  -->
+            <div ui-view="" class="ng-scope">
+                <!-- uiView:  -->
+                <div ui-view="" class="ng-scope">
+                    <div ng-controller="friendCtrl as friendCtrl" class="ng-scope">
+                        <!-- 顶部 -->
+                        <div class="header bg_red">
+                            <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                            <h3 class="title ng-binding">分享赚钱</h3>
+                            <a href="#" class="msg"></a>
+                        </div>
+                        <!-- 主体 -->
+                        <section class="pageContent">
+                            <div class="p1 ng-binding">
+                                快来邀请朋友一起来Vwin游戏吧！
+                            </div>
+                            <div class="p2 ng-binding">
+                                复制网址或通过社交工具分享，让您与朋友一同感受Vwin带来的优惠及惊喜！
+                            </div>
+                            <div class="p3">邀请朋友来Vwin游戏，当您的朋友累计存款超过人民币1000元，
+                                <span>您将获得50元的推荐红利！</span>您朋友将获得：多平台存款红利、新用户验证红利、以及更多不定时惊喜大礼包！</div>
+                            <div class="p4">
+                                <input type="text" readonly class="ng-pristine ng-valid">
+                            </div>
+                            <div class="p5">
+                                <button clipboard="" text="friendCtrl.friendLink" on-copied="friendCtrl.copySuccess()" on-error="friendCtrl.copyFail(err, friendCtrl.CopyLink)"
+                                    class="ng-binding ng-isolate-scope">复制链接</button>
+                            </div>
+                        </section>
+                        <section class="showFriend">
+                            <ul class="u1">
+                                <li>
+                                    <ul class="u2">
+                                        <li class="ng-binding">朋友名</li>
+                                        <li class="ng-binding">注册日期</li>
+                                        <li class="ng-binding">存款额</li>
+                                        <li class="ng-binding">奖金额</li>
+                                        <li class="ng-binding">状态</li>
+                                    </ul>
+                                </li>
+                                <!-- ngRepeat: item in friendCtrl.friends_bouns -->
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+
+    </body>
+
+</html>

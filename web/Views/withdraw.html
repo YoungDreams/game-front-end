@@ -1,0 +1,74 @@
+<html id="ng-app" xmlns="http://www.w3.org/1999/xhtml" data-dpr="1" style="font-size: 41.4px;" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>提款</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+	
+	<script src="../content/js/rem.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+
+<body class="bg_gray">
+    <div class="layout">
+        <!-- uiView:  --><div ui-view="" class="ng-scope"><!-- uiView:  --><div ui-view="" class="ng-scope"><div class="layout ng-scope">
+    <!-- 填寫真實姓名用 -->
+    <!-- ngIf: withdrawCtrl.nameSetting -->
+    <!--添加、刪除、選擇银行卡使用-->
+    <!-- ngIf: withdrawCtrl.fakeLightBox.show -->
+    <!-- 無銀行卡 -->
+    <!-- ngIf: withdrawCtrl.noCard && !withdrawCtrl.fakeLightBox.show --><div  class="ng-scope">
+        <div class="container">
+            <div class="header bg_blue">
+                    <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                    
+                <h3 class="title ng-binding">提款</h3>
+                <a  class="msg"></a>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header-gray-bg2"></div>
+                </div>
+            </div>
+            <!-- "可提資金區塊"開始 -->
+            <div class="extract_fund box">
+                <div class="flex money">
+                    <div class="fund_k ng-binding">可提资金</div>
+                    <div class="fund_v ng-binding">¥ 0.00</div>
+                </div>
+                <div class="flex">
+                    <div class="fund_k ng-binding">提款限额：</div>
+                    <div class="fund_v ng-binding">¥ 0.00</div>
+                </div>
+            </div>
+            <!-- "可提資金區塊"結束 -->
+            <!-- 添加銀行卡開始 -->
+
+            <div class="card_list">
+                <div class="item_card box" >
+                    <div class="card_logo add_icon"><img src="../content/images/add_c.png" alt=""></div>
+                    <div class="flex card_info">
+                        <a href="javascript://" class="tip add_card ng-binding">添加银行卡</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 添加銀行卡結束 -->
+            <!--<div class="bottom-link">
+                <a href="javascript://" >{{'member_bank_withdraw@info' | translate}}</a>
+            </div>-->
+        </div>
+    </div><!-- end ngIf: withdrawCtrl.noCard && !withdrawCtrl.fakeLightBox.show -->
+
+    <!-- 提款頁 -->
+    <!-- ngIf: withdrawCtrl.stateOrder && !withdrawCtrl.fakeLightBox.show -->
+</div></div></div>
+
+
+</body></html>

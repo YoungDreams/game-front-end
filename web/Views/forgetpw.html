@@ -1,0 +1,89 @@
+<html id="ng-app" ng-app="VwinMobile" ng-controller="mainCtrl as mainCtrl" xmlns="http://www.w3.org/1999/xhtml" data-dpr="1" style="font-size: 37.5px;" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>vwin</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!-- ngIf: mainCtrl.metadata.description --><meta description="德赢Vwin.com是尤文图斯官方区域合作伙伴，在德赢Vwin.com您可以体验体育赛事、网上扑克牌游戏、在线小游戏等各种在线游戏。德赢Vwin.com提供极致的用户体验和完美的客户服务，致力于打造亚洲顶级的在线游戏平台。" ng-if="mainCtrl.metadata.description" class="ng-scope"><!-- end ngIf: mainCtrl.metadata.description -->
+    <!-- ngIf: mainCtrl.metadata.keywords --><meta keywords="德赢Vwin,德赢Vwin.com,vwin.com官网,尤文图斯区域合作伙伴" ng-if="mainCtrl.metadata.keywords" class="ng-scope"><!-- end ngIf: mainCtrl.metadata.keywords -->
+    <title translate="德赢Vwin.com_尤文图斯官方区域合作伙伴" class="ng-scope">德赢Vwin.com_尤文图斯官方区域合作伙伴</title>
+
+    <!--頁面使用REM JS-->
+    <script type="text/javascript" async="" charset="utf-8" src="https://c.cnzz.com/core.php?web_id=1000479327&amp;t=q"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="Scripts/rem.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <link rel="stylesheet" href="../content/css/index.css">
+    <link rel="stylesheet" href="../content/css/message.css">
+    <link rel="stylesheet" href="../content/css/register.css">>
+    <link rel="stylesheet" ng-href="../content/css/zh-cn.css" href="../content/css/zh-cn.css">
+
+    
+<body ng-class="{'bg_gray' : mainCtrl.isBg_gray}" form-panel-height="" style="font-size: 12px;" class="bg_gray">
+    <div class="layout">
+        <!-- uiView:  --><div ui-view="" class="ng-scope"><div class="layout ng-scope">
+    <!-- 上面空間 開始 -->
+    <div class="flex_head ng-isolate-scope" header-back="" headerclass="'bg_red'" title="'forget@find_pwd'|translate" backfn="forgetCtrl.back()" rightclass="'msg'" righttext="" rightfn="forgetCtrl.gotoUrl()">
+    <div class="header bg_red">
+        <a href="javascript://" class="back ng-binding" ng-click="backfn()">返回</a>
+        <h3 class="title ng-binding">找回密码</h3>
+        <a href="javascript://" class="msg" ng-click="rightfn()"></a>
+    </div>
+</div>
+    <!-- 上面空間 結束 -->
+    <!--輸入用戶名-->
+    <div class="container ng-scope">
+        <div id="" class="form_panel gray_form">
+            <div class="login_form">
+                <form class="ng-pristine ng-valid">
+                    <div class="form_group">
+                        <input type="text" name="userName" placeholder="请输入您的用户名" ng-model="forgetCtrl.userName" class="ng-pristine ng-valid">
+                    </div>
+                    <!--<div class="form_tip">账号或密码错误，请重新输入</div>-->
+
+                    <button class="red_button ng-binding" >下一步</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container ng-scope">
+        <div class="account_panel">
+            <!--未驗證 手机验证-->
+            <!--<div class="item_option edit_option" ng-if="!forgetCtrl.hasMobileVerify">
+                <div class="option_k">手机验证</div>
+            </div>-->
+            <!--有驗證 手机验证-->
+            <!-- ngIf: forgetCtrl.hasMobileVerify --><div class="item_option edit_option ng-scope" ng-click="forgetCtrl.setMobile();" ng-if="forgetCtrl.hasMobileVerify">
+                <div class="option_k ng-binding" ng-bind="'forgetpw@setMobile'|translate">手机验证</div>
+                <div class="option_v show_panel">&nbsp;</div>
+            </div><!-- end ngIf: forgetCtrl.hasMobileVerify -->
+
+            <!--未驗證 邮箱验证-->
+            <!--<div class="item_option edit_option" ng-if="!forgetCtrl.hasEmailVerify">
+                <div class="option_k">邮箱验证</div>
+            </div>-->
+            <!--有驗證 邮箱验证-->
+            <!-- ngIf: forgetCtrl.hasEmailVerify --><div class="item_option edit_option ng-scope" ng-click="forgetCtrl.setEmail();" ng-if="forgetCtrl.hasEmailVerify">
+                <div class="option_k ng-binding" ng-bind="'forgetpw@setEmail'|translate">邮箱验证</div>
+                <div class="option_v show_panel">&nbsp;</div>
+            </div><!-- end ngIf: forgetCtrl.hasEmailVerify -->
+
+            <!--未驗證 安全问题验证-->
+            <!--<div class="item_option edit_option" ng-if="!forgetCtrl.hasQuestionVerify">
+                <div class="option_k">安全问题验证</div>
+            </div>-->
+            <!--有驗證 安全问题验证-->
+            <!-- ngIf: forgetCtrl.hasQuestionVerify --><div class="item_option edit_option ng-scope" ng-click="forgetCtrl.setQuestion();" ng-if="forgetCtrl.hasQuestionVerify">
+                <div class="option_k ng-binding" ng-bind="'forgetpw@setQuestion'|translate">安全问题验证</div>
+                <a class="option_v">&nbsp;</a>
+            </div><!-- end ngIf: forgetCtrl.hasQuestionVerify -->
+        </div>
+
+    </div>
+</div>
+
+
+</body></html>

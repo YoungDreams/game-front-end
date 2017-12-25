@@ -1,0 +1,239 @@
+<html class="ng-scope">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>钱包</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+
+
+
+	<script src="../content/js/rem.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+</head>
+
+
+    <body form-panel-height="" style="font-size: 12px;" class="bg_gray">
+        <div class="layout">
+            <!-- uiView:  -->
+            <div class="ng-scope">
+                <!-- uiView:  -->
+                <div ui-view="" class="ng-scope">
+                    <div ng-controller="bankCtrl as bankCtrl" class="ng-scope">
+                        <!-- 顶部 -->
+                        <div class="header bg_blue">
+                            <a class="msg"></a>
+                        </div>
+                        <!-- 资金明细 -->
+                        <div class="wallet_header">
+                            <div class="total_fund_info">
+                                <div class="total_num">
+                                    <i class="ng-binding">¥</i>
+                                    <span class="fz45 ng-binding" id="totalNum">0.50</span>
+                                </div>
+                                <a class="fund_detail ng-binding" href="history.html">资金明细</a>
+                            </div>
+                            <div class="fund_info box">
+                                <div class="flex money">
+                                    <div class="fund_k ng-binding">可提资金(元)：</div>
+                                    <div class="fund_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </div>
+                                <div class="flex">
+                                    <div class="fund_k ng-binding">提款限额：</div>
+                                    <div class="fund_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </div>
+                            </div>
+                            <a class="msg" href="#/member/account/message/member.transfer/"></a>
+
+                        </div>
+                        <!-- 主体 -->
+                        <div class="container">
+                            <!-- 资金操作 -->
+                            <div class="action_panel box">
+                                <div class="flex">
+                                    <a class="ng-binding" href="deposit.html">
+                                        <i class="icon-symbol-ck"></i>存款</a>
+                                </div>
+                                <div class="flex">
+                                    <a class="ng-binding" href="transfer.html">
+                                        <i class="icon-symbol-zz"></i>转账</a>
+                                </div>
+                                <div class="flex">
+                                    <a class="ng-binding" href="withdraw.html">
+                                        <i class="icon-symbol-tx"></i>提款</a>
+                                </div>
+                            </div>
+                            <!-- 主账户 -->
+                            <div class="main_account">
+                                <div class="fund_p box">
+                                    <div class="fp_k">
+                                        <b class="ng-binding">主帐户</b>
+                                    </div>
+                                    <div class="flex fp_v">
+                                        <i class="ng-binding">¥</i>
+                                        <b class="ng-binding">0.00</b>
+                                    </div>
+                                </div>
+                                <!-- ngRepeat: items in platforms_vwallet -->
+                                <div class="game_p box ng-scope">
+                                    <!-- ngRepeat: item in items -->
+                                    <a class="game_item flex ng-scope" href="">
+                                        <i class="icon-personal-1"></i>
+                                        <span class="ng-binding">体育</span>
+                                    </a>
+                                    <!-- end ngRepeat: item in items -->
+                                    <a class="game_item flex ng-scope" href="">
+                                        <i class="icon-personal-2"></i>
+                                        <span class="ng-binding">彩票</span>
+                                    </a>
+                                    <!-- end ngRepeat: item in items -->
+                                    <a class="game_item flex ng-scope" href="">
+                                        <i class="icon-personal-3"></i>
+                                        <span class="ng-binding">GamesOS游戏</span>
+                                    </a>
+                                    <!-- end ngRepeat: item in items -->
+                                </div>
+                                <!-- end ngRepeat: items in platforms_vwallet -->
+                                <div class="game_p box ng-scope">
+                                    <!-- ngRepeat: item in items -->
+                                    <a class="game_item flex ng-scope" href="">
+                                        <i class="icon-personal-4"></i>
+                                        <span class="ng-binding">Betsoft游戏</span>
+                                    </a>
+                                    <!-- end ngRepeat: item in items -->
+                                    <a class="game_item flex ng-scope" href="">
+                                        <i class="icon-personal-5"></i>
+                                        <span class="ng-binding">QT游戏</span>
+                                    </a>
+                                    <!-- end ngRepeat: item in items -->
+                                    <a class="game_item flex ng-scope" href="">
+                                        <i class="icon-personal-6"></i>
+                                        <span class="ng-binding">MG游戏</span>
+                                    </a>
+                                    <!-- end ngRepeat: item in items -->
+                                </div>
+                                <!-- end ngRepeat: items in platforms_vwallet -->
+                            </div>
+                            <!-- 各类游戏 -->
+                            <ul class="more_game_fund">
+                                <!-- ngRepeat: item in platforms_Notvwallet | orderBy: 'sort' -->
+                                <!-- ngIf: !item.forceHide -->
+                                <li class="game_item box ng-scope">
+                                    <div class="ig_k icon_ig1 ng-binding">
+                                        <i class="icon-personal-7"></i> 沙巴体育</div>
+                                    <div class="flex ig_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </li>
+                                <li class="game_item box ng-scope">
+                                    <div class="ig_k icon_ig1 ng-binding">
+                                        <i class="icon-personal-8"></i> 铂金馆</div>
+                                    <div class="flex ig_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </li>
+                                <li class="game_item box ng-scope">
+                                    <div class="ig_k icon_ig1 ng-binding">
+                                        <i class="icon-personal-9"></i> 翡翠厅</div>
+                                    <div class="flex ig_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.50</div>
+                                </li>
+                                <li ng-repeat="item in platforms_Notvwallet | orderBy: 'sort'" class="game_item box ng-scope">
+                                    <div class="ig_k icon_ig1 ng-binding">
+                                        <i class="icon-personal-10"></i> 星耀厅</div>
+                                    <div class="flex ig_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </li>
+                                <li ng-repeat="item in platforms_Notvwallet | orderBy: 'sort'" class="game_item box ng-scope">
+                                    <div class="ig_k icon_ig1 ng-binding">
+                                        <i class="icon-personal-11"></i> 波音馆</div>
+                                    <div class="flex ig_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </li>
+                                <li ng-repeat="item in platforms_Notvwallet | orderBy: 'sort'" class="game_item box ng-scope">
+                                    <div class="ig_k icon_ig1 ng-binding">
+                                        <i class="icon-personal-12"></i> 海盗城</div>
+                                    <div class="flex ig_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </li>
+                                <li ng-repeat="item in platforms_Notvwallet | orderBy: 'sort'" class="game_item box ng-scope">
+                                    <div class="ig_k icon_ig1 ng-binding">
+                                        <i class="icon-personal-13"></i> 夺宝岛</div>
+                                    <div class="flex ig_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </li>
+                                <li ng-repeat="item in platforms_Notvwallet | orderBy: 'sort'" class="game_item box ng-scope">
+                                    <div class="ig_k icon_ig1 ng-binding">
+                                        <i class="icon-personal-14"></i> 米兰站</div>
+                                    <div class="flex ig_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </li>
+                                <li ng-repeat="item in platforms_Notvwallet | orderBy: 'sort'" class="game_item box ng-scope">
+                                    <div class="ig_k icon_ig1 ng-binding">
+                                        <i class="icon-personal-15"></i> Playtech游戏</div>
+                                    <div class="flex ig_v ng-binding">
+                                        <i class="ng-binding">¥</i>0.00</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部 -->
+            <div class="footer ng-scope ng-isolate-scope" footer="">
+                <div class="content box">
+                    <div class="item_nav">
+                        <a href="index.html">
+                            <i class="icon_home"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">首页</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item_nav">
+                        <a href="promotion.html">
+                            <i class="icon_youhui"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">优惠</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="flex s_nav rig_nav ng-scope">
+                        <a href="deposit.html">
+                            <span class="fixText">
+                                <span class="ng-binding">存款</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item_nav active">
+                        <a href="bank.html">
+                            <i class="icon_qianbao"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">钱包</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item_nav show_panel ng-scope unread">
+                        <a href="member.html">
+                            <i class="icon_yonghu"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">个人中心</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 底部结束 -->
+
+    </body>
+
+</html>

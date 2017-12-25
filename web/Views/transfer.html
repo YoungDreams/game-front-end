@@ -1,0 +1,69 @@
+<html id="ng-app" ng-app="VwinMobile" ng-controller="mainCtrl as mainCtrl" xmlns="http://www.w3.org/1999/xhtml" data-dpr="1" style="font-size: 37.5px;" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>转账</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+	
+	<script src="../content/js/rem.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!-- ngIf: !mainCtrl.hideAccountCss -->
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+
+
+<body style="font-size: 12px;" class="">
+    <div class="layout">
+        <!-- uiView:  --><div ui-view="" class="ng-scope"><!-- uiView:  --><div ui-view="" class="ng-scope"><div class="layout ng-scope">
+    <div class="header bg_blue">
+        <a href="javascript:history.back()" class="back ng-binding">返回</a>
+        <h3 class="title ng-binding">转帐</h3>
+        <a  class="msg"></a>
+    </div>
+    <div class="container">
+        <div class="transfer_fund">
+            <div class="fund_num ng-binding"><i  class="ng-binding">¥</i>0.00</div>
+            <a  class="fund_line ng-binding" href="history.html">资金明细</a>
+        </div>
+        <div class="transfer_form">
+            <a  class="change_btn"></a>
+            <div class="transfer_enter box">
+                <div class="te_label ng-binding">转出帐户</div>
+                <div class="flex">
+                    <select class="ui-select ng-pristine ng-invalid ng-invalid-required"   required=""><option value="" disabled="" class="ng-binding">
+                            请选择转出帐户
+                        </option><option value="0" label="主帐户">主帐户</option><option value="1" label="沙巴体育">沙巴体育</option><option value="2" label="铂金馆">铂金馆</option><option value="3" label="翡翠厅">翡翠厅</option><option value="4" label="星耀厅">星耀厅</option><option value="5" label="米兰站">米兰站</option><option value="6" label="海盗城">海盗城</option><option value="7" label="夺宝岛">夺宝岛</option><option value="8" label="Playtech游戏">Playtech游戏</option><option value="9" label="波音馆">波音馆</option></select>
+                </div>
+            </div>
+            <div class="transfer_enter box">
+                <div class="te_label ng-binding">转入账户</div>
+                <div class="flex">
+                    <select class="ui-select ng-pristine ng-invalid ng-invalid-required"   required=""><option value="" disabled="" class="ng-binding">
+                            请选择转入帐户
+                        </option><option value="0" label="主帐户">主帐户</option><option value="1" label="沙巴体育">沙巴体育</option><option value="2" label="铂金馆">铂金馆</option><option value="3" label="翡翠厅">翡翠厅</option><option value="4" label="星耀厅">星耀厅</option><option value="5" label="米兰站">米兰站</option><option value="6" label="海盗城">海盗城</option><option value="7" label="夺宝岛">夺宝岛</option><option value="8" label="Playtech游戏">Playtech游戏</option><option value="9" label="波音馆">波音馆</option></select>
+                </div>
+            </div>
+            <div class="transfer_enter">
+                <!--<input number-input  placeholder="{{'member_transfer@please_enter_the_transfer_amount'|translate}}">-->
+                <div number-input="" hint="'member_transfer@please_enter_the_transfer_amount' | translate" ngmodel="transferCtrl.amount" class="ng-isolate-scope"><input type="tel" class="" placeholder="请输入转帐金额" ></div>
+            </div>
+            <div class="tip ng-binding" ></div>
+            <button class="tf_btn ng-binding disable"  >提交</button>
+        </div>
+    </div>
+    <!-- 成功提示 -->
+    <div id="resultMsg" class="form_panel fixed_form_panel message_panel">
+        <div class="panel_mask"></div>
+        <div class="message_box" style="width:70px;">
+            <div class="icon"></div>
+            <div class="text ng-binding" style="text-align:center;">转账成功</div>
+        </div>
+    </div>
+</div></div></div>
+
+       
+</body></html>

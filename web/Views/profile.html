@@ -1,0 +1,305 @@
+<html xmlns="http://www.w3.org/1999/xhtml" data-dpr="1" style="font-size: 41.4px;" class="ng-scope">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>个人资料</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!--頁面使用REM JS-->
+    <script type="text/javascript" async charset="utf-8" src="https://c.cnzz.com/core.php?web_id=1000479327&amp;t=q"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!-- ngIf: !mainCtrl.hideAccountCss -->
+    <link rel="stylesheet" href="../content/css/account.css" class="ng-scope">
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+
+
+</head>
+
+<body form-panel-height="" style="font-size: 12px;" class="bg_gray">
+    <div class="layout">
+        <!-- uiView:  -->
+        <div ui-view="" class="ng-scope">
+            <!-- uiView:  -->
+            <div ui-view="" class="ng-scope">
+                <!-- uiView:  -->
+                <div ui-view="" class="ng-scope">
+                    <div class="layout ng-scope">
+                        <!-- 顶部 開始 -->
+                        <div class="flex_head ng-isolate-scope" header-back="" headerclass="'bg_red'" title="'account_profile_info@title'|translate"
+                            ba="" backfn="profileInfoCtrl.back()" rightclass="'msg'" righttext="" rightfn="profileInfoCtrl.gotoUrl()">
+                            <div class="header bg_red">
+                                <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                                <h3 class="title ng-binding">个人资料</h3>
+                                <a href="#" class="msg"></a>
+                            </div>
+                        </div>
+                        <!-- 顶部  結束 -->
+
+                        <!-- ngIf: profileInfoCtrl.dataReady -->
+                        <div class="container ng-scope">
+                            <!-- ngIf: profileInfoCtrl.currencyID !== 18 -->
+                            <div class="hot_tip ng-binding ng-scope">完成手机、邮箱、实名认证领 ￥38</div>
+                            <!-- end ngIf: profileInfoCtrl.currencyID !== 18 -->
+
+                            <div class="account_panel">
+                                <!--绑定手机-->
+                                <div id="opaniPhone" class="item_option edit_option">
+                                    <div class="option_k ng-binding" >绑定手机</div>
+                                    <!-- ngIf: profileInfoCtrl.threeItemsStatusData.Phone.status -->
+                                    <div class="option_v show_panel c_gray ng-binding ng-scope" >18113****20</div>
+                                    <!-- end ngIf: profileInfoCtrl.threeItemsStatusData.Phone.status -->
+                                    <!-- ngIf: !profileInfoCtrl.threeItemsStatusData.Phone.status -->
+                                </div>
+
+                                <!--邮箱-->
+                                <div id="opanemailCode" class="item_option edit_option">
+                                    <div class="option_k ng-binding" >邮箱</div>
+                                    <!-- ngIf: profileInfoCtrl.threeItemsStatusData.Email.status -->
+                                    <div class="option_v show_panel c_gray ng-binding ng-scope" >98450****@qq.com</div>
+                                    <!-- end ngIf: profileInfoCtrl.threeItemsStatusData.Email.status -->
+                                    <!-- ngIf: !profileInfoCtrl.threeItemsStatusData.Email.status -->
+                                </div>
+
+                                <!--实名认证-->
+                                <div id="opanvalidate" class="item_option edit_option">
+                                    <div class="option_k ng-binding" >实名认证</div>
+                                    <!-- ngIf: profileInfoCtrl.threeItemsStatusData.Name.status -->
+                                    <div class="option_v show_panel c_gray ng-binding ng-scope" >岳*</div>
+                                    <!-- end ngIf: profileInfoCtrl.threeItemsStatusData.Name.status -->
+                                    <!-- ngIf: !profileInfoCtrl.threeItemsStatusData.Name.status -->
+                                </div>
+                            </div>
+                            <div class="account_panel">
+
+                                <!--生日-->
+                                <div class="item_option">
+                                    <div class="option_k ng-binding" >生日</div>
+                                    <div class="option_v">
+                                        <div class="sel_ip_box">
+                                            <!-- ngIf: !profileInfoCtrl.loginInfo.birthdayStatus -->
+                                            <!-- ngIf: profileInfoCtrl.loginInfo.birthdayStatus -->
+                                            <input style="width:106px;text-align:right;padding-right:20px;color:#959595;"
+                                                id="shengri1" type="text" class="ng-scope ng-pristine ng-valid">
+                                            <!-- end ngIf: profileInfoCtrl.loginInfo.birthdayStatus -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--性别-->
+                                <div class="item_option">
+                                    <div class="option_k ng-binding" >性别</div>
+                                    <div class="option_v">
+                                        <div class="sel_ip_box">
+                                            <select name="" id="xingbie" style="text-indent: 0; padding: 0;" ng-disabled="profileInfoCtrl.loginInfo.genderStatus" class="ng-pristine ng-valid"
+                                                disabled="disabled">
+                                                <option ng-selected="profileInfoCtrl.loginInfo.gender == '1'" value="1" 
+                                                    class="ng-binding" selected="selected">男</option>
+                                                <option ng-selected="profileInfoCtrl.loginInfo.gender == '0'" value="0" 
+                                                    class="ng-binding">女</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--国籍-->
+                                <div class="item_option">
+                                    <div class="option_k ng-binding" >国籍</div>
+                                    <div class="option_v">
+                                        <div class="sel_ip_box">
+                                            <select name="" id="guoji" style="text-indent: 0; padding: 0;" class="ng-pristine ng-valid">
+                                                <option ng-selected="profileInfoCtrl.loginInfo.countryID == '2'" value="2" 
+                                                    class="ng-binding" selected="selected">中国</option>
+                                                <option ng-selected="profileInfoCtrl.loginInfo.countryID == '618'" value="618" 
+                                                    class="ng-binding">越南</option>
+                                                <option ng-selected="profileInfoCtrl.loginInfo.countryID == '602'" value="602" 
+                                                    class="ng-binding">泰国</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--邮编-->
+                                <div id="opanpostcode" class="item_option edit_option">
+                                    <div class="option_k ng-binding" >邮编</div>
+                                    <!-- ngIf: profileInfoCtrl.loginInfo.zipCodeStatus -->
+                                    <!-- ngIf: !profileInfoCtrl.loginInfo.zipCodeStatus -->
+                                    <div class="option_v show_panel c_red ng-binding ng-scope" >未设置</div>
+                                    <!-- end ngIf: !profileInfoCtrl.loginInfo.zipCodeStatus -->
+                                </div>
+
+                                <!--地址-->
+                                <div id="openaddress" class="item_option edit_option">
+                                    <div class="option_k ng-binding" >地址</div>
+                                    <!-- ngIf: profileInfoCtrl.loginInfo.addressStatus -->
+                                    <!-- ngIf: !profileInfoCtrl.loginInfo.addressStatus -->
+                                    <div class="option_v show_panel c_red ng-binding ng-scope" >未设置</div>
+                                    <!-- end ngIf: !profileInfoCtrl.loginInfo.addressStatus -->
+                                </div>
+                            </div>
+
+                            <div class="personal_more ng-binding">
+                                修改密码及安全问题请前往
+                                <p><a class="ng-binding" href="security.html">安全中心</a></p>
+                            </div>
+                        </div>
+                        <!-- end ngIf: profileInfoCtrl.dataReady -->
+                    </div>
+
+                    <!-- 绑定手机 	active-->
+					
+                    <div id="iPhone" class="form_panel fixed_form_panel ng-scope" >
+                            <div class="panel_mask" ></div>
+                            <div class="form">
+                                <!-- ngIf: profileInfoCtrl.phoneData.page_flow == 'new' || profileInfoCtrl.phoneData.page_flow == 'update' || profileInfoCtrl.phoneData.page_flow == 'verify' --><form ng-if="profileInfoCtrl.phoneData.page_flow == 'new' || profileInfoCtrl.phoneData.page_flow == 'update' || profileInfoCtrl.phoneData.page_flow == 'verify'" class="ng-scope ng-pristine ng-valid">
+                                    <div class="phone_code_group">
+                                        <div class="form_group" style="width:30%;float:left;">
+                                            <select  ng-options="item.code as item.name for item in profileInfoCtrl.area" disabled="" class="ng-pristine ng-valid"><option value="0" selected="selected" label="中国 +86">中国 +86</option><option value="1" label="越南 +84">越南 +84</option><option value="2" label="泰国 +66">泰国 +66</option></select>
+                                        </div>
+                                        <div class="form_group" style="width:65%;margin-left:10px;">
+                                            <!-- ngIf: profileInfoCtrl.phoneData.page_flow == 'new' || profileInfoCtrl.phoneData.page_flow == 'update' || !profileInfoCtrl.phoneData.isMask -->
+                                            <!-- ngIf: profileInfoCtrl.phoneData.page_flow == 'verify' && profileInfoCtrl.phoneData.isMask --><input type="tel" name="phone"  ng-if="profileInfoCtrl.phoneData.page_flow == 'verify' &amp;&amp; profileInfoCtrl.phoneData.isMask" placeholder="请输入您的手机号" class="ng-scope ng-pristine ng-valid"><!-- end ngIf: profileInfoCtrl.phoneData.page_flow == 'verify' && profileInfoCtrl.phoneData.isMask -->
+                                        </div>
+                                    </div>
+                        
+                                    <div class="phone_code_group">
+                                        <div class="form_group">
+                                            <input type="text" name="phoneCode"  maxlength="6" placeholder="请输入验证码" class="ng-pristine ng-valid">
+                                        </div>
+                                        <!-- ngIf: !profileInfoCtrl.phoneCountdown.type -->
+                                        <!-- ngIf: profileInfoCtrl.phoneCountdown.type --><button class="red_button set_btn disable_button ng-binding ng-scope" type="button" ng-if="profileInfoCtrl.phoneCountdown.type">
+                                            获取验证码
+                                            <timer interval="1000" countdown="profileInfoCtrl.phoneCountdown.second" class="ng-binding ng-isolate-scope"><span class="ng-binding ng-scope">5</span></timer>
+                                        </button><!-- end ngIf: profileInfoCtrl.phoneCountdown.type -->
+                        
+                                    </div>
+                                    <div class="form_tip ng-binding" >旧密码不正确</div>
+                        
+                                    <button class="red_button sub_btn ng-binding disable_button"   >提交</button>
+                                    <button type="button" class="gray_button close ng-binding"  >取消</button>
+                                </form><!-- end ngIf: profileInfoCtrl.phoneData.page_flow == 'new' || profileInfoCtrl.phoneData.page_flow == 'update' || profileInfoCtrl.phoneData.page_flow == 'verify' -->
+                                <!-- ngIf: profileInfoCtrl.phoneData.page_flow == 'success' -->
+                            </div>
+                        </div>
+
+                    <!-- 绑定邮箱 -->
+                    <div class="form_panel fixed_form_panel ng-scope" >
+                            <div class="panel_mask" ></div>
+                            <div class="login_form">
+                                <form class="ng-pristine ng-valid">
+                                    <div class="form_group">
+                                        <input type="text" name="email"   placeholder="请输入您的邮箱" class="ng-pristine ng-valid">
+                                    </div>
+                                    <div class="form_tip ng-binding" >请设置提款密码，并妥善保管</div>
+                        
+                                    <button class="red_button ng-binding"   >提交</button>
+                                    <button type="button" class="gray_button close ng-binding cancel_mask"  >取消</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    <!-- 邮箱找回 -->
+                    <div id="emailCode" class="form_panel fixed_form_panel ng-scope">
+                        <div class="panel_mask" style="display: block;"></div>
+                        <div class="form">
+                            <form class="bind_form ng-pristine ng-valid">
+                                <div class="form_top_tip ng-binding">我们已发送验证码到这个信箱
+                                    <!-- ngIf: !profileInfoCtrl.threeItemsStatusData.Email.status -->
+                                </div>
+                                <div class="form_top_tip c_red ng-binding" ></div>
+                                <div class="phone_code_group">
+                                    <div class="form_group">
+                                        <input type="text" name="emailCode" maxlength="6" placeholder="请输入验证码" class="ng-pristine ng-valid">
+                                    </div>
+                                    <!-- ngIf: !profileInfoCtrl.emailCountdown.type -->
+                                    <button class="red_button set_btn ng-binding ng-scope disable_button" type="button">
+                                        获取验证码
+                                    </button>
+                                    <!-- end ngIf: !profileInfoCtrl.emailCountdown.type -->
+                                    <!-- ngIf: profileInfoCtrl.emailCountdown.type -->
+                                </div>
+                                <button class="red_button ng-binding disable_button" >提交</button>
+                                <button type="button" class="gray_button close  cancel_mask" >取消</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <!-- 实名认证 -->
+                    <div id="validate" class="form_panel fixed_form_panel">
+                        <div class="panel_mask"></div>
+                        <div class="login_form">
+                            <form class="ng-pristine ng-valid">
+                                <div class="form_group">
+                                    <!-- ngIf: !profileInfoCtrl.nameData.name_readonly -->
+                                    <input type="text" name="userName" minlength="2" maxlength="25" ng-trim="false" 
+                                        placeholder="请输入姓名" class="ng-scope ng-pristine ng-valid">
+                                    <!-- end ngIf: !profileInfoCtrl.nameData.name_readonly -->
+                                    <!-- ngIf: profileInfoCtrl.nameData.name_readonly -->
+                                </div>
+                                <div class="form_group">
+                                    <input type="text" name="userNo" maxlength="50" ng-trim="false"  placeholder="请输入证件号码"
+                                        class="ng-pristine ng-valid">
+                                </div>
+                                <!-- ngIf: profileInfoCtrl.currencyID === 18 -->
+                                <div class="form_sm c_gray ng-binding" >实名认证后，您将不能更改您的真实姓名。该信息将会加密处理，仅用于账户资金安全操作用。</div>
+                                <div class="form_tip ng-binding" style="text-align: left;" >请设置提款密码，并妥善保管</div>
+
+                                <button class="red_button ng-binding" >提交</button>
+                                <button type="button" class="gray_button close ng-binding cancel_mask" >取消</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <!-- 邮政编码 -->
+                    <div id="postcode" class="form_panel fixed_form_panel ng-scope">
+                        <div class="panel_mask"></div>
+                        <div class="login_form">
+                            <form class="ng-pristine ng-valid">
+                                <div class="form_group">
+                                    <input type="text" name="postcode" placeholder="请输入邮编" class="ng-pristine ng-valid">
+                                </div>
+                                <div class="form_tip ng-binding" style="text-align: left;" >请设置提款密码，并妥善保管</div>
+                                <button class="red_button ng-binding disable_button" >提交</button>
+                                <button type="button" class="gray_button close ng-binding cancel_mask" >取消</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- 地址 -->
+                    <div  id="address" class="form_panel fixed_form_panel">
+                        <div class="panel_mask"></div>
+                        <div class="login_form">
+                            <form class="ng-pristine ng-valid">
+                                <div class="form_group">
+                                    <textarea name="address" id="" cols="30" rows="3" placeholder="请输入地址" class="ng-pristine ng-valid"></textarea>
+                                </div>
+                                <div class="form_tip ng-binding" style="text-align: left;" >请设置提款密码，并妥善保管</div>
+                                <button class="red_button ng-binding disable_button" >提交</button>
+                                <button type="button" class="gray_button close ng-binding cancel_mask" >取消</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- 成功提示 -->
+                    <!-- ngIf: profileInfoCtrl.message_panel.active -->
+                </div>
+            </div>
+        </div>
+
+        
+<!-- js -->
+<script src="../content/js/rem.js"></script>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="../content/js/ft-carousel.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../content/js/swiper-3.4.2.min.js"></script>
+<script src="../content/js/js.js"></script>
+</body>
+
+</html>

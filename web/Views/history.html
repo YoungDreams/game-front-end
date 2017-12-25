@@ -1,0 +1,93 @@
+<html class="ng-scope">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>资金明细</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!--頁面使用REM JS-->
+
+	<script src="../content/js/rem.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+</head>
+    <body form-panel-height="" style="font-size: 12px;" class="">
+        <div class="layout">
+            <!-- uiView:  -->
+            <div ui-view="" class="ng-scope">
+                <!-- uiView:  -->
+                <div ui-view="" class="ng-scope">
+                    <!-- uiView: master -->
+                    <div ui-view="master" class="ng-scope">
+                        <!-- 顶部 -->
+                        <div class="header bg_blue ng-scope">
+                            <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                            <h3 class="title ng-binding">资金明细</h3>
+                            <!--<a href="javascript:void()" class="action show_panel" target="shaixuan">筛选</a>-->
+                            <a class="action show_panel ng-binding" href="history2.html">筛选</a>
+                        </div>
+                        <!-- 顶部 结束 -->
+                        <div class="container ng-scope">
+                            <!--主帳戶-->
+                            <!-- ngIf: historyCtrl.selectPlatform == '10001' -->
+                            <div class="ng-scope">
+                                <!-- ngRepeat: dataitem in historyCtrl.data -->
+                                <div ng-repeat="dataitem in historyCtrl.data" class="fund_detail_item ng-scope">
+                                    <div class="time_panel drop_down ng-binding">2017/12/18</div>
+                                    <div class="detail_list">
+                                        <!-- ngIf: dataitem.DepositCounts>0 -->
+                                        <!-- ngIf: dataitem.WithdrawalCounts>0 -->
+                                        <!-- ngIf: dataitem.FundTransferCounts>0 -->
+
+                                        <!-- ngIf: dataitem.TotalBonus>0 -->
+                                        <!-- ngIf: dataitem.WinLossAmount>0 -->
+                                    </div>
+                                </div>
+                                <!-- end ngRepeat: dataitem in historyCtrl.data -->
+                                <div ng-repeat="dataitem in historyCtrl.data" class="fund_detail_item ng-scope">
+                                    <div class="time_panel drop_down ng-binding">2017/12/17</div>
+                                    <div class="detail_list">
+                                        <!-- ngIf: dataitem.DepositCounts>0 -->
+                                        <div class="det_item ck_det ng-scope">
+                                            <a>
+                                                <div class="num ng-binding">¥0.00</div>
+                                                <div class="txt ng-binding">存款</div>
+                                            </a>
+                                        </div>
+                                        <!-- end ngIf: dataitem.DepositCounts>0 -->
+                                        <!-- ngIf: dataitem.WithdrawalCounts>0 -->
+                                        <!-- ngIf: dataitem.FundTransferCounts>0 -->
+
+                                        <!-- ngIf: dataitem.TotalBonus>0 -->
+                                        <!-- ngIf: dataitem.WinLossAmount>0 -->
+                                    </div>
+                                </div>
+                                <!-- end ngRepeat: dataitem in historyCtrl.data -->
+                            </div>
+                            <!-- end ngIf: historyCtrl.selectPlatform == '10001' -->
+                            <!--其他平台-->
+                            <!-- ngIf: historyCtrl.selectPlatform != '10001' -->
+
+                            <!-- ngIf: historyCtrl.selectPlatform != '10001' -->
+                        </div>
+
+                    </div>
+                    <!-- end ngIf: historyCtrl.hasData && historyCtrl.method === '' -->
+                    <!--篩選(預設)-->
+                    <!-- ngIf: historyCtrl.method === 'selectDefault' -->
+                    <!-- 交易記錄詳細資料 -->
+                    <!-- ngIf: historyCtrl.method === 'detail' -->
+                </div>
+            </div>
+
+           
+
+    </body>
+
+</html>

@@ -1,0 +1,198 @@
+<html class="ng-scope">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>红利领取</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!--頁面使用REM JS-->
+    <script src="../content/js/rem.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!-- ngIf: !mainCtrl.hideAccountCss -->
+    <link rel="stylesheet" href="../content/css/account.css" class="ng-scope">
+    <!-- end ngIf: !mainCtrl.hideAccountCss -->
+
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+</head>
+    <body style="font-size: 12px;" class="bg_gray">
+        <div class="layout">
+            <!-- uiView:  -->
+            <div ui-view="" class="ng-scope">
+                <!-- uiView:  -->
+                <div ui-view="" class="ng-scope">
+                    <!-- uiView:  -->
+                    <div ui-view="" class="ng-scope">
+                        <div class="layout ng-scope">
+                            <!-- 顶部 -->
+                            <div class="flex_head ng-isolate-scope" header-back="" headerclass="'bg_red'" title="'member_my@container_promotion'|translate"
+                                backfn="promotionCtrl.back()" rightclass="'msg'" righttext="" rightfn="promotionCtrl.gotoUrl()">
+                                <div class="header bg_red">
+                                    <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                                    <h3 class="title ng-binding">红利领取</h3>
+                                    <a href="#" class="msg"></a>
+                                </div>
+                            </div>
+                            <!-- 顶部 結束 -->
+                            <!-- 主体 -->
+                            <div class="container bonus_panel">
+                                <!-- 标题 -->
+                                <div class="bonus_nav">
+                                    <a class="bonus_type ng-binding active">已申请</a>
+                                    <a class="bonus_type ng-binding">待申请</a>
+                                    <a class="bonus_type ng-binding">领取记录</a>
+                                </div>
+                                <!-- 标题 结束 -->
+                                <!--已申请-->
+                                <!-- ngIf: promotionCtrl.selectItem == 1 -->
+                                <div class="bonus_list ng-scope">
+                                    <!-- ngRepeat: item in promotionCtrl.bonusList.applied -->
+                                    <div class="item_bonus show_panel ng-scope on" ng-repeat="item in promotionCtrl.bonusList.applied">
+                                        <div class="icon icon1"></div>
+                                        <div class="text ng-binding">身份证验证红利</div>
+                                    </div>
+                                    <!-- end ngRepeat: item in promotionCtrl.bonusList.applied -->
+                                    <div class="item_bonus show_panel ng-scope on" ng-repeat="item in promotionCtrl.bonusList.applied">
+                                        <div class="icon icon1"></div>
+                                        <div class="text ng-binding">手机验证红利</div>
+                                    </div>
+                                    <!-- end ngRepeat: item in promotionCtrl.bonusList.applied -->
+                                    <div class="item_bonus show_panel ng-scope on" ng-repeat="item in promotionCtrl.bonusList.applied">
+                                        <div class="icon icon1"></div>
+                                        <div class="text ng-binding">Email验证红利</div>
+                                    </div>
+                                    <!-- end ngRepeat: item in promotionCtrl.bonusList.applied -->
+                                </div>
+                                <!-- end ngIf: promotionCtrl.selectItem == 1 -->
+
+                                <!--待申请-->
+                                <!-- ngIf: promotionCtrl.selectItem == 8 -->
+
+                                <!--领取记录-->
+                                <!-- ngIf: promotionCtrl.selectItem == 6 -->
+                            </div>
+                        </div>
+
+
+
+                        <!-- 弹出框 -->
+                        <div class="form_panel fixed_form_panel bonus_panel ng-scope">
+                            <div class="panel_box">
+                                <div class="panel_mask"></div>
+                                <div class="panel_cont">
+                                    <div class="p_head">
+                                        <div class="b_name ng-binding"></div>
+                                        <div class="b_price ng-binding">¥</div>
+                                        <div class="b_limit ng-binding">提款限额: ¥</div>
+                                    </div>
+                                    <div class="p_body">
+                                        <div class="bonus_march">
+                                            <div class="march_groove">
+                                                <div class="march_esse" ng-style="{'width':promotionCtrl.bonusDetail.bonusWater + '%'}"></div>
+                                            </div>
+                                            <div class="box">
+                                                <div class="">0.00</div>
+                                                <div class="flex ng-binding">目前流水：</div>
+                                                <div class="ng-binding"></div>
+                                            </div>
+                                        </div>
+                                        <div class="more_p">
+
+                                            <!--发放时间-->
+                                            <div class="more_option box">
+                                                <div class="mp_k ng-binding">发放时间</div>
+                                                <!-- ngIf: promotionCtrl.bonusDetail.createTime != '' -->
+                                                <div class="mp_v flex ng-binding ng-scope"></div>
+                                                <!-- end ngIf: promotionCtrl.bonusDetail.createTime != '' -->
+                                                <!-- ngIf: promotionCtrl.bonusDetail.createTime == '' -->
+                                            </div>
+                                            <!-- ngIf: promotionCtrl.bonusDetail.BonusCategoryID != 5 && promotionCtrl.bonusDetail.BonusCategoryID != 7 -->
+                                            <div class="more_option box ng-scope">
+
+                                                <!--认证时间-->
+                                                <div class="mp_k ng-binding">认证时间</div>
+                                                <!-- ngIf: promotionCtrl.bonusDetail.verifyTime != '' -->
+                                                <div class="mp_v flex ng-binding ng-scope"></div>
+                                                <!-- end ngIf: promotionCtrl.bonusDetail.verifyTime != '' -->
+                                                <!-- ngIf: promotionCtrl.bonusDetail.verifyTime == '' -->
+
+                                                <!--驗證紅利-->
+                                                <!--<div class="mp_v flex" >{{promotionCtrl.bonusDetail.verifyTime}}</div>
+                        <div class="mp_v flex" >-</div>-->
+
+                                                <!--全平台存款紅利-->
+                                                <!--<div class="mp_v flex" >{{promotionCtrl.bonusDetail.depositTime}}</div>
+                        <div class="mp_v flex" >-</div>-->
+
+                                                <!--平台首存紅利-->
+                                                <!--<div class="mp_v flex" >{{promotionCtrl.bonusDetail.transferTime}}</div>
+                        <div class="mp_v flex" >-</div>-->
+
+                                                <!--流水紅利-->
+                                                <!--<div class="mp_v flex" >{{promotionCtrl.bonusDetail.turnoverBeginTime}}</div>
+                        <div class="mp_v flex" >-</div>-->
+
+                                                <!--其他-->
+                                                <!--<div class="mp_v flex" >-</div>-->
+                                            </div>
+                                            <!-- end ngIf: promotionCtrl.bonusDetail.BonusCategoryID != 5 && promotionCtrl.bonusDetail.BonusCategoryID != 7 -->
+
+                                            <!--计算时间-->
+                                            <!-- ngIf: promotionCtrl.bonusDetail.turnoverEndTime != '' -->
+                                            <div class="more_option box ng-scope">
+                                                <div class="mp_k ng-binding">计算时间</div>
+                                                <div class="mp_v flex ng-binding"></div>
+                                            </div>
+                                            <!-- end ngIf: promotionCtrl.bonusDetail.turnoverEndTime != '' -->
+
+                                            <!--转账时间-->
+                                            <!-- ngIf: promotionCtrl.bonusDetail.transferTime != '' -->
+                                            <div class="more_option box ng-scope">
+                                                <div class="mp_k ng-binding">转帐时间</div>
+                                                <div class="mp_v flex ng-binding"></div>
+                                            </div>
+                                            <!-- end ngIf: promotionCtrl.bonusDetail.transferTime != '' -->
+                                        </div>
+                                    </div>
+
+                                    <div class="p_foot">
+
+                                        <!--有效日期-->
+                                        <!-- ngIf: promotionCtrl.bonusDetail.validTime != '' -->
+                                        <div class="re_time c_red fz10 ng-binding ng-scope">
+                                            有效日期
+                                        </div>
+                                        <!-- end ngIf: promotionCtrl.bonusDetail.validTime != '' -->
+
+                                        <!--立即领取-->
+                                        <!-- ngIf: promotionCtrl.selectItem == 1 -->
+                                        <button class="ng-binding ng-scope re_button1">立即领取</button>
+                                        <!-- end ngIf: promotionCtrl.selectItem == 1 -->
+
+                                        <!--立即申请-->
+                                        <!-- ngIf: promotionCtrl.selectItem == 8 -->
+
+                                        <!--领取记录-->
+                                        <!-- ngIf: promotionCtrl.selectItem == 6 && promotionCtrl.bonusDetail.ClaimedTime != null && promotionCtrl.bonusDetail.ClaimedTime != '' -->
+                                        <!-- ngIf: promotionCtrl.selectItem == 6 && (promotionCtrl.bonusDetail.ClaimedTime == null || promotionCtrl.bonusDetail.ClaimedTime == '') -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 弹出框结束 -->
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+    </body>
+
+</html>

@@ -1,0 +1,109 @@
+<html class="ng-scope">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>资金明细-筛选</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!--頁面使用REM JS-->
+
+	<script src="../content/js/rem.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <link rel="stylesheet" href="../content/css/filtrate.css">
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+
+    <body form-panel-height="" style="font-size: 12px;" class="">
+        <div class="layout">
+            <!-- uiView:  -->
+            <div ui-view="" class="ng-scope">
+                <!-- uiView:  -->
+                <div ui-view="" class="ng-scope">
+                    <!--無資料-->
+                    <!-- ngIf: !historyCtrl.hasData && historyCtrl.method === '' -->
+                    <!--交易紀錄列表-->
+                    <!-- ngIf: historyCtrl.hasData && historyCtrl.method === '' -->
+                    <!--篩選(預設)-->
+                    <!-- ngIf: historyCtrl.method === 'selectDefault' -->
+                    <!-- uiView: selectDefault -->
+                    <div ui-view="selectDefault" ng-if="historyCtrl.method === 'selectDefault'" class="ng-scope">
+                        <link rel="stylesheet" href="../content/filtrate.css" class="ng-scope">
+                        <div class="header bg_blue ng-scope">
+                            <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                            <h3 class="title ng-binding">资金明细</h3>
+                            <a class="action show_panel ng-binding" href="#">筛选</a>
+                        </div>
+                        <section class="ng-scope">
+                            <div class="p1">
+                                <div class="tittle ng-binding">时间</div>
+                                <ul class="clearfix">
+                                    <li>
+                                        <a href="#" class="ng-binding active">24小时</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="ng-binding">48小时</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="ng-binding">1周</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="ng-binding">1个月</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="p2">
+                                <div class="tittle ng-binding">选择平台</div>
+                                <ul class="clearfix">
+                                    <li class="ng-scope">
+                                        <a href="javascript://" class="ng-binding ng-scope active">主帐户 MainAccount</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">沙巴体育 SB</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">铂金馆 EA</a>
+                                    </li>
+                                    <li class="ng-scope">
+                                        <a href="javascript://" class="ng-binding ng-scope">翡翠厅 AG</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">星耀厅 W88</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">米兰站 EV</a>
+                                    </li>
+                                    <li class="ng-scope">
+                                        <a href="javascript://" class="ng-binding ng-scope">海盗城 OP</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">夺宝岛 GD</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">游戏 PlayTech</a>
+                                    </li>
+                                    <li class="ng-scope">
+                                        <a href="javascript://" class="ng-binding ng-scope">波音馆 BBIN</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">彩票 GB</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">游戏 Betsoft</a>
+                                    </li>
+                                    <li class="ng-scope">
+                                        <a href="javascript://" class="ng-binding ng-scope">游戏 QT</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">MG</a>
+                                        <a href="javascript://" class="ng-binding ng-scope">体育</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="p2">
+                                <div class="tittle ng-binding">状态</div>
+                                <ul class="clearfix">
+                                    <li>
+                                        <a href="javascript://" class="ng-binding active">已结算</a>
+                                        <a href="javascript://" class="ng-binding">未结算</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- end ngIf: historyCtrl.method === 'selectDefault' -->
+                    <!-- 交易記錄詳細資料 -->
+                    <!-- ngIf: historyCtrl.method === 'detail' -->
+                </div>
+            </div>
+
+
+    </body>
+
+</html>

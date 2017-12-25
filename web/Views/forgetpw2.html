@@ -1,0 +1,321 @@
+<html id="ng-app" ng-app="VwinMobile" ng-controller="mainCtrl as mainCtrl" xmlns="http://www.w3.org/1999/xhtml" data-dpr="1" style="font-size: 37.5px;" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>vwin</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!-- ngIf: mainCtrl.metadata.description --><meta description="德赢Vwin.com是尤文图斯官方区域合作伙伴，在德赢Vwin.com您可以体验体育赛事、网上扑克牌游戏、在线小游戏等各种在线游戏。德赢Vwin.com提供极致的用户体验和完美的客户服务，致力于打造亚洲顶级的在线游戏平台。" ng-if="mainCtrl.metadata.description" class="ng-scope"><!-- end ngIf: mainCtrl.metadata.description -->
+    <!-- ngIf: mainCtrl.metadata.keywords --><meta keywords="德赢Vwin,德赢Vwin.com,vwin.com官网,尤文图斯区域合作伙伴" ng-if="mainCtrl.metadata.keywords" class="ng-scope"><!-- end ngIf: mainCtrl.metadata.keywords -->
+    <title translate="德赢Vwin.com_尤文图斯官方区域合作伙伴" class="ng-scope">德赢Vwin.com_尤文图斯官方区域合作伙伴</title>
+
+    <!--頁面使用REM JS-->
+    <script type="text/javascript" async="" charset="utf-8" src="https://c.cnzz.com/core.php?web_id=1000479327&amp;t=q"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="Scripts/rem.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/css/common.css">
+    <link rel="stylesheet" href="styles/css/index.css">
+    <!-- ngIf: !mainCtrl.hideAccountCss --><link ng-if="!mainCtrl.hideAccountCss" rel="stylesheet" href="styles/css/account.css" class="ng-scope"><!-- end ngIf: !mainCtrl.hideAccountCss -->
+    <link rel="stylesheet" href="styles/css/deposit.css">
+    <link rel="stylesheet" href="styles/css/function.css">
+    <!-- ngIf: !mainCtrl.hideGameCss --><link ng-if="!mainCtrl.hideGameCss" rel="stylesheet" href="styles/css/game.css" class="ng-scope"><!-- end ngIf: !mainCtrl.hideGameCss -->
+    <link rel="stylesheet" href="styles/css/message.css">
+    <link rel="stylesheet" href="styles/css/register.css">
+    <!--<link rel="stylesheet" href="styles/css/reset.css" />-->
+    <link rel="stylesheet" href="styles/css/wallet.css">
+    <link rel="stylesheet" href="Styles/css/recommend.css">
+
+    <!--custom_rd-->
+    <link rel="stylesheet" href="styles/custom_rd.css">
+    <link rel="stylesheet" href="styles/material-icons.css">
+    <link rel="stylesheet" ng-href="Styles/css/zh-cn.css" href="Styles/css/zh-cn.css">
+
+    <!-- jQuery UI -->
+    <!-- JS (load angular, ui-router) -->
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/jquery-ui.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-cookie.min.js"></script>
+    <script src="Scripts/angular-clipboard.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="Scripts/angular-translate.min.js"></script>
+    <script src="Scripts/angular-translate-loader-static-files.min.js"></script>
+    <script src="Scripts/angular-timer-all.min.js"></script>
+    <script src="Scripts/angular-css.min.js"></script>
+    <script src="Scripts/angular-clipboard.js"></script>
+    <script src="Scripts/angular-filter.min.js"></script>
+    <!--https://github.com/nglar/ngTouch-->
+    <script src="Scripts/angular-ngtouch.js"></script>
+    <script src="Scripts/qrcode.js"></script>
+    <script src="Scripts/qrcode_UTF8.js"></script>
+    <script src="Scripts/angular-qrcode.js"></script>
+    <script src="Scripts/ng-infinite-scroll.js"></script>
+    <script src="Scripts/formatDate.js"></script>
+    <script src="Scripts/moment.min.js"></script>
+    <script src="Scripts/ua-parser.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/humanize-duration.js"></script>
+    <!--<script src="Scripts/TweenMax.min.js"></script>-->
+    <script src="Scripts/jquery.knob.js"></script>
+    <script src="Scripts/touch-0.2.14.min.js"></script>
+    <script src="Scripts/touch.js"></script>
+    <!--<script src="Scripts/alasql.min.js"></script>-->
+    <!--<script src="Scripts/xls.core.min.js"></script>-->
+    <!--<script src="Scripts/xlsx.core.min.js"></script>-->
+    <!--<script src="Scripts/include-min.js"></script>-->
+    <!-- 讀入view -->
+    <!--<script src="Scripts/anime.min.js"></script>-->
+    <!-- 動畫指令 -->
+    <!--<script src="Scripts/custom-btn-min.js"></script>-->
+    <!-- 首頁按鈕 -->
+    <script src="Scripts/jquery.flexslider.js"></script>
+    <!--輪播-->
+    <!--<script src="Scripts/Chart.min.js"></script>-->
+    <!-- 圓餅圖 -->
+    <!--<script src="Scripts/aos.js"></script>-->
+    <!--<script src="Scripts/jquery.mCustomScrollbar.js"></script>-->
+    <!--<script src="Scripts/jquery.mCustomScrollbar.concat.min.js"></script>-->
+<script language="javascript" type="text/javascript" src="https://mpsnare.iesnare.com/script/logo.js"></script><script type="text/javascript" src="https://msp2.vwinchina.com/mobile/js/GbLogout.js"></script><script type="text/javascript" src="https://keno.vwinchina.com/mobile/js/keno/GbLogout.js"></script><script type="text/javascript" src="https://keno.vwinchina.com/mobile/js/lotto/GbLogout.js"></script><script type="text/javascript" src="https://keno.vwinchina.com/mobile/js/ssc/GbLogout.js"></script><script type="text/javascript" src="https://msp2.vwinchina.com/Mobile/js/GbMenuSVC.js"></script><script src="https://msp2.vwinchina.com/js/GbPlatform.js" type="text/javascript" charset="utf-8"></script><script language="javascript" type="text/javascript" src="https://msp2.vwinchina.com/mobile/common/LoginSvc.ashx?m=0&amp;tpid=001&amp;languagecode=zh-cn&amp;token="></script><script language="javascript" type="text/javascript" src="https://msp2.vwinchina.com/js/lz-string-1.3.3-min.js"></script><script language="javascript" type="text/javascript" src="https://msp2.vwinchina.com/js/jquery.signalR-2.2.0.js"></script><script language="javascript" type="text/javascript" src="https://msp2.vwinchina.com/mobile/common/IdxSvc.ashx?m=0&amp;tpid=001&amp;languagecode=zh-cn"></script></head>
+
+<body ng-class="{'bg_gray' : mainCtrl.isBg_gray}" form-panel-height="" style="font-size: 12px;" class="bg_gray">
+    <div class="layout">
+        <!-- uiView:  --><div ui-view="" class="ng-scope"><div class="layout ng-scope">
+    <!-- 上面空間 開始 -->
+    <div class="flex_head ng-isolate-scope" header-back="" headerclass="'bg_red'" title="'forget@find_pwd'|translate" backfn="forgetCtrl.back()" rightclass="'msg'" righttext="" rightfn="forgetCtrl.gotoUrl()">
+    <div class="header bg_red">
+        <a href="javascript://" class="back ng-binding" ng-click="backfn()">返回</a>
+        <h3 class="title ng-binding">找回密码</h3>
+        <a href="javascript://" class="msg" ng-click="rightfn()"></a>
+    </div>
+</div>
+    <!-- 上面空間 結束 -->
+    <!--輸入用戶名-->
+    <!-- ngIf: forgetCtrl.state == 'init' -->
+
+    <!-- ngIf: forgetCtrl.state == 'confirm' --><div class="container ng-scope" ng-if="forgetCtrl.state == 'confirm'">
+        <div class="account_panel">
+            <!--未驗證 手机验证-->
+            <!--<div class="item_option edit_option" ng-if="!forgetCtrl.hasMobileVerify">
+                <div class="option_k">手机验证</div>
+            </div>-->
+            <!--有驗證 手机验证-->
+            <!-- ngIf: forgetCtrl.hasMobileVerify --><div class="item_option edit_option ng-scope" ng-click="forgetCtrl.setMobile();" ng-if="forgetCtrl.hasMobileVerify">
+                <div class="option_k ng-binding" ng-bind="'forgetpw@setMobile'|translate">手机验证</div>
+                <div class="option_v show_panel">&nbsp;</div>
+            </div><!-- end ngIf: forgetCtrl.hasMobileVerify -->
+
+            <!--未驗證 邮箱验证-->
+            <!--<div class="item_option edit_option" ng-if="!forgetCtrl.hasEmailVerify">
+                <div class="option_k">邮箱验证</div>
+            </div>-->
+            <!--有驗證 邮箱验证-->
+            <!-- ngIf: forgetCtrl.hasEmailVerify --><div class="item_option edit_option ng-scope" ng-click="forgetCtrl.setEmail();" ng-if="forgetCtrl.hasEmailVerify">
+                <div class="option_k ng-binding" ng-bind="'forgetpw@setEmail'|translate">邮箱验证</div>
+                <div class="option_v show_panel">&nbsp;</div>
+            </div><!-- end ngIf: forgetCtrl.hasEmailVerify -->
+
+            <!--未驗證 安全问题验证-->
+            <!--<div class="item_option edit_option" ng-if="!forgetCtrl.hasQuestionVerify">
+                <div class="option_k">安全问题验证</div>
+            </div>-->
+            <!--有驗證 安全问题验证-->
+            <!-- ngIf: forgetCtrl.hasQuestionVerify --><div class="item_option edit_option ng-scope" ng-click="forgetCtrl.setQuestion();" ng-if="forgetCtrl.hasQuestionVerify">
+                <div class="option_k ng-binding" ng-bind="'forgetpw@setQuestion'|translate">安全问题验证</div>
+                <a class="option_v">&nbsp;</a>
+            </div><!-- end ngIf: forgetCtrl.hasQuestionVerify -->
+        </div>
+
+    </div><!-- end ngIf: forgetCtrl.state == 'confirm' -->
+
+    <!--無認證方式-->
+    <!-- ngIf: forgetCtrl.state == 'noverify' -->
+</div>
+
+<!-- 绑定手机 -->
+<!-- ngIf: forgetCtrl.state == 'verify' && forgetCtrl.isMobile -->
+
+<!-- 绑定邮箱 -->
+<!-- ngIf: forgetCtrl.state == 'verify' && forgetCtrl.isEmail -->
+
+
+<!--安全問題-->
+<!-- ngIf: forgetCtrl.state == 'verify' && forgetCtrl.isQuestion -->
+
+<!--修改密碼-->
+<!-- ngIf: forgetCtrl.state == 'reset' -->
+<!-- 修改密码 -->
+<!--<div class="form_panel fixed_form_panel" ng-class="{'active' : forgetCtrl.state == 'reset' && !forgetCtrl.isQuestion }">
+    <div class="panel_mask" ng-click="forgetCtrl.hideEllipsis('confirm');"></div>
+    <div class="login_form">
+        <form>
+            <div class="form_group pwd_group">
+                <input type="password" id="pwd3" name="password" placeholder="{{'forget@new_password'|translate}}" ng-model="forgetCtrl.newpassword">
+                <a href="javascript:" class="check_btn" ng-click="forgetCtrl.showPassword('pwd3');"></a>
+            </div>
+            <div class="form_group pwd_group">
+                <input type="password" id="pwd4" name="newPassword" placeholder="{{'forget@confirm_new_password'|translate}}" ng-model="forgetCtrl.repeatNewpassword">
+                <a href="javascript:" class="check_btn" ng-click="forgetCtrl.showPassword('pwd4');"></a>
+            </div>
+            <div class="form_tip">旧密码不正确</div>
+
+            <button class="red_button" ng-class="{'disable_button' : !forgetCtrl.newpassword || !forgetCtrl.repeatNewpassword}" ng-click="(forgetCtrl.newpassword && forgetCtrl.repeatNewpassword) && forgetCtrl.onSubmitClick()">提交</button>
+            <button type="button" class="gray_button close" ng-click="forgetCtrl.hideEllipsis('confirm');">取消</button>
+        </form>
+    </div>
+</div>-->
+<!-- 修改密码 -->
+<div class="form_panel fixed_form_panel ng-scope" ng-class="{'active' : forgetCtrl.state == 'complete' }">
+    <div class="panel_mask" ng-click="forgetCtrl.hideEllipsis('confirm');"></div>
+    <div class="login_form">
+        <div class="suc_panel" style="display: block;">
+            <div class="tip_panel">
+                <div class="icon"></div>
+                <div class="text ng-binding" ng-bind="'forgetpw@success'|translate">修改成功</div>
+            </div>
+            <a class="gray_button close_suc ng-binding" ng-click="forgetCtrl.hideEllipsis('confirm');">发送确认</a>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+        <!-- ngIf: mainCtrl.showFooter -->
+        <!-- 登陆 -->
+        <div id="loginPanel" class="form_panel fixed_form_panel" style="display: block;">
+            <div class="panel_mask" ng-click="mainCtrl.hideLogin()" style="display: block;"></div>
+            <div class="form">
+                <form ng-init="showPwd='password'" class="ng-valid ng-dirty">
+                    <div class="form_group">
+                        <input type="text" ng-model="mainCtrl.accountName.value" name="userName" placeholder="用户名" class="ng-pristine ng-valid">
+                    </div>
+                    <div class="form_group pwd_group">
+                        <input type="password" ng-model="mainCtrl.accountPassword.value" name="password" placeholder="密码" class="ng-valid ng-dirty">
+                        <a href="javascript:" class="check_btn material-icons ng-binding" ng-click="showPwd = showPwd=='password'?'text':'password'" ng-bind="showPwd == 'text'?'visibility':'visibility_off'">visibility_off</a>
+                    </div>
+                    <!--<div class="form_group code_group">
+                        <input type="text" name="code" placeholder="验证码" />
+                        <div class="code_box"><img src="styles/image/code.png" alt="" /></div>
+                    </div>-->
+                    <div class="form_tip ng-binding" ng-class="{'showitem': mainCtrl.loginMsg!=''}"></div>
+                    <div class="form_ctl">
+                        <label class="label ng-binding">
+                            <i class="form_ckeckbox active" ng-class="{'active' : mainCtrl.allowLogAccountName }">
+                                <input type="checkbox" for="c1" ng-click="mainCtrl.checkLogAccountName()" ng-checked="mainCtrl.allowLogAccountName" checked="checked">
+                            </i>
+                            记住用户名
+                        </label>
+                        <a class="fr forget_pwd ng-binding" ng-click="mainCtrl.getPassword();" ng-bind="'index@forget_pwd'|translate">找回密码</a>
+                    </div>
+                    <div id="login" btn="btn" btnclass="'submit'" btntext="'index@login'|translate" disable="!mainCtrl.accountName.value || !mainCtrl.accountPassword.value" active="" isloading="mainCtrl.isLoading" goto="" clickfunc="mainCtrl.loginSubmit()" class="ng-isolate-scope" style="visibility: visible;">
+    <button type="button" class="button submit" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-hide="isloading">
+        登录
+    </button>
+    <button type="button" class="button submit ng-hide" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-show="isloading">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </button>
+</div>
+
+                    <!--<button class="submit"></button>-->
+                </form>
+                <div class="login_foot ng-binding">没有账号？<a ui-sref="register" class="ng-binding" href="#/register">请新建一个账号</a></div>
+            </div>
+
+        </div>
+        <!--loading-->
+        <div class="loading_wrap" ng-click="mainCtrl.LoadClose()">
+            <div class="shape">
+                <span class="loading_logo"></span>
+                <span class="loading_rotate"></span>
+                <div class="loading_alert">
+                    <div class="icon success"></div>
+                    <div class="text ng-binding">登录成功!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登入成功訊息 -->
+    <!--
+        <div id="loginSuccess" class="form_panel fixed_form_panel" ng-click="mainCtrl.hideSuccess()">
+            <div class="panel_mask"></div>
+            <div class="toast">
+                <div class="item">
+                <i></i>
+                {{'index@login_success'|translate}}
+              </div>
+            </div>
+        </div>
+        -->
+    
+
+    <!-- CUSTOM JS -->
+    <!--<script type="text/javascript" src="Scripts/custom-min.js"></script>-->
+    <!--<script type="text/javascript" src="Scripts/custom-nav-min.js"></script>-->
+    <!-- 選單動態 -->
+    <!--<script src="http://qasport.vwintouzhu.com/Mobile/js/GbMenuSVC.js?20161221009"></script>-->
+    <!-- IOVATION -->
+    <input type="hidden" name="blackBox" id="blackBox" value="0400CIfeAe15Cx8Nf94lis1zttBaVgjxlOd9SmyTmrVWdtEn0OO01LpcYnjTwpxzOH6EB0A5wSkYGiq667L3Qr5mTsvxHLOapLxIFpGdpVdVZ9NIwoY8ye2u0nVLKa5eUqvJ5dzgojLfFGvNZhMeU+JzHm02AdSpZGHWTB2uAnj83NkM9YLJcLTb+jC3o7rRuIcSBd7KySp6ExwoDvlKqcW/vijXXRsiV76FAyR3pTz0syVnitm8joMx7l3mstYn+WdFiK7pMCw9zdTk0B48ux+V4QZkghiV83r4oHJB1JAcCFm8VDdLGBfK9PH/LgnAtMTg3VuhruP9En9Su80n2mMzbZ0+Sx/Ll27hjDgDxeGmm0odzsNApIcEVbMDAndsahzk8Ga3Tzi3G/WVT31SgfbGSXAOJzs3LIdIo9TQIvBbVpxJn9w8QC5clIOqvc0P+DZABvtNxmatDq6EHYcu9+UDzl+rdsbATajArHfzpKu0BjAcqCYRdV0obnaSwVqaWdUNw+E1ob+/FRCJ3uese38lUZb/57l0F0Br19ICgzhT9Wvz6D+YNUMLEWK0aG2E3OZcCwH7sarvkvYnoBmUA2kxLGE7VDaOZWB8Tmy+T80eupzB5O4f7FI0WG7uHeX5hj7jJpQYAFUrDlc9AnTd8xqrEM93iyBs9CJ+NrmFJnQAjztkbJAjnuUpA2TSJJR0cKt8fj5jMxiAiexFzxyWyyA6gpHpEZBvi7ikGTB8Kq+X3ZhY3FNMLdLrSQEGAmOHb+IzhDJ4mzdrUKTqTWpjG4D1G87/1quAnwfpT98F+MOXcFGBURnl+Pl458GvHaKsyJLsFmQWppRl6BvfqGZvqRwR0xPXa9yyBokXeVaYJEF00M1LKVRd4ar4fWgKnqXYYSElpGeL7N4G1aP2u6eu8pQ9UHmsO5IWad3Tu6828R9GQm4EklhNoEOqggtuHmc6Pe7cNepEKIoJSuwSQy3zP1/E72kssZVBQohhHbBPDncKJYr3oU6k968Na1C/0PQwVK9AfF9hXdZ4DRRkrbXWcoCj3EFS9nbsv6+gZNnHw9CBwCH9rxZ7qeEFWQfrmL/vczpnozCu5shojyvqosdO0EZTQrxm+a40Vv+TYqC6LRPAemXG7jl5phDC62RldsJWcg/7KGgB+kACCg0sPiZXdNCqfBysMnJtGlonF+6EN1I6xjFrRjLkmcdikxY2G7q5lJDunQUigX82ZlJ62PDP4YYA2OFmONUmhONTLCffJdf72qBC3FhxV5FwJmTmOqLA3SnRLwyYlHgsMzDMe/zJEUz+uWv1NuC/jDOah4TrDAJXzRjxY5/9N+s1ims9fwO0Kv7cMcatCFEVI6FwPpPV0ZSMvy9X8oCJXUNpoctCvvSVfGqWu1Cfs1qCtSns6wqOuNt9CP+o9BGuCAsaAxxPLgyoBw==">
+
+    <!-- 1. Configure iovation's JavaScript. -->
+    <script language="JavaScript">
+        // Configurations must be on page before snare.js
+        window.io_install_stm = false, // do not install Active X
+            window.io_exclude_stm = 12, // do not run Active X
+            window.io_install_flash = false, // do not install Flash
+            window.io_enable_rip = true; // collect Real IP information
+    </script>
+    <!-- 2. Define io_bb_callback(). -->
+    <script language="JavaScript">
+        // io_bb_callback() will be executed as blackBox is updated
+        // Final update will set isComplete to true
+        // Must be on page before snare.js
+        function io_bb_callback(blackBoxString, isComplete) {
+            if (isComplete) {
+                document.getElementById('blackBox').value = blackBoxString;
+            }
+        };
+    </script>
+
+    <!-- 3. Load snare.js. MUST NOT BE STORED LOCALLY -->
+    <!--<script src="Scripts/snare.js"></script>-->
+    <script src="https://mpsnare.iesnare.com/snare.js"></script>
+    <!-- inject:js -->
+    <script src="appServices.js?v=1.3.2"></script>
+    <script src="appConfig.js?v=1.3.2"></script>
+    <script src="appFeatures1.js?v=1.3.2"></script>
+    <script src="appFeatures2.js?v=1.3.2"></script>
+    <script src="appFeatures3.js?v=1.3.2"></script>
+    <script src="appFeatures4.js?v=1.3.2"></script>
+    <script src="appFeatures5.js?v=1.3.2"></script>
+    <!-- endinject -->
+
+    <!-- GA -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-93347524-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!-- CNZZ -->
+    <span id="cnzz_stat_icon_1000479327"></span>
+    <script defer="" async="" src="//w.cnzz.com/c.php?id=1000479327" type="text/javascript"></script>
+
+
+</body></html>

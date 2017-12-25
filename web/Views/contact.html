@@ -1,0 +1,77 @@
+<html  class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>联系我们</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+
+	<script src="../content/js/rem.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+
+</head>
+<body  form-panel-height="" style="font-size: 12px;" class="">
+    <div class="layout">
+        <!-- uiView:  --><div ui-view="" class="ng-scope"><div class="layout ng-scope">
+    <!-- 上面空間 開始 -->
+    <div class="flex_head ng-isolate-scope" header-back="" headerclass="'bg_red'" title="aboutCtrl.title" backfn="aboutCtrl.back()" rightclass="'msg'" righttext="" rightfn="aboutCtrl.gotoUrl()">
+    <div class="header bg_red">
+            <a href="javascript:history.back()" class="back ng-binding">返回</a>
+        <h3 class="title ng-binding">联系我们</h3>
+        <a href="javascript://" class="msg" ></a>
+    </div>
+</div>
+    <!-- 上面空間 結束 -->
+
+    <!--关于VWIN-->
+    <!-- ngIf: aboutCtrl.method == 'vwin' -->
+
+    <!--责任博彩-->
+    <!-- ngIf: aboutCtrl.method == 'responsible' -->
+
+    <!--联系我们-->
+    <!-- ngIf: aboutCtrl.method == 'contact' --><div about-contact=""  class="ng-scope ng-isolate-scope"><div class="container">
+    <div class="form_panel">
+        <form action="" class="form ng-pristine ng-valid">
+
+            <!--姓名-->
+            <div class="form_group">
+                <input type="text" name="userName"  placeholder="请输入您的姓名" class="ng-pristine ng-valid">
+            </div>
+
+            <!--mail-->
+            <div class="form_group">
+                <input type="email" name="email"   placeholder="请输入您的联系邮箱地址" class="ng-pristine ng-valid ng-valid-email">
+            </div>
+
+            <!--问题类型-->
+            <div class="form_group">
+                <select    class="ng-pristine ng-valid"><option value="" disabled="" class="ng-binding">问题类型</option><option value="3" label="技术">技术</option><option value="2" label="财务">财务</option><option value="1" label="市场">市场</option></select>
+            </div>
+
+            <!--主题-->
+            <div class="form_group">
+                <select   class="ng-pristine ng-valid"><option value="" disabled="" class="ng-binding">主题</option></select>
+            </div>
+
+            <!--内容-->
+            <div class="form_group">
+                <textarea name="" id="" cols="30"  rows="8" placeholder="内容..." class="ng-pristine ng-valid"></textarea>
+            </div>
+
+            <div class="form_tip"></div>
+            <div class="form_group"></div>
+            <button class="red_button ng-binding disable_button"  >提交</button>
+        </form>
+    </div>
+</div></div><!-- end ngIf: aboutCtrl.method == 'contact' -->
+</div></div>
+
+        
+</body></html>

@@ -1,0 +1,114 @@
+
+<html id="ng-app" ng-app="VwinMobile" ng-controller="mainCtrl as mainCtrl" xmlns="http://www.w3.org/1999/xhtml" data-dpr="1" style="font-size: 45.8px;" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>系统设置</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    
+
+	<script src="../content/js/rem.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!-- ngIf: !mainCtrl.hideAccountCss --><link  rel="stylesheet" href="../content/css/account.css" class="ng-scope"><!-- end ngIf: !mainCtrl.hideAccountCss -->
+    <link rel="stylesheet" href="../content/css/function.css">
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/recommend.css">
+</head>
+<body  form-panel-height="" style="font-size: 12px;" class="bg_gray">
+    <div class="layout">
+        <!-- uiView:  --><div ui-view="" class="ng-scope"><!-- uiView:  --><div ui-view="" class="ng-scope"><div class="layout ng-scope">
+    <!-- 上面空間 開始 -->
+    <div class="flex_head ng-isolate-scope" header-back="" headerclass="'bg_red'" title="'setting@title'|translate" backfn="settingCtrl.back()" rightclass="'msg'" righttext="" rightfn="settingCtrl.gotoUrl()">
+    <div class="header bg_red">
+            <a href="javascript:history.back()" class="back ng-binding">返回</a>
+        <h3 class="title ng-binding">系统设置</h3>
+        <a href="#" class="msg" ></a>
+    </div>
+</div>
+    <!-- 上面空間 結束 -->
+
+    <!-- ngIf: settingCtrl.isDataReady --><div class="container ng-scope" >
+        <div class="account_panel"></div>
+        <div class="account_panel">
+
+            <!--盘口设定-->
+            <div class="item_option edit_option">
+                <div class="option_k ng-binding" >盘口设定</div>
+                <div class="option_v c_gray drop_down ng-binding" id="pk_select"  >香港盘</div>
+            </div>
+            <ul class="drop_down_option pk_select">
+                <!-- ngRepeat: item in settingCtrl.handicaps --><li class="item_option ng-scope pk_yn"  ng-repeat="item in settingCtrl.handicaps" >
+                    <div class="option_k ng-binding" >印尼盘</div>
+                </li><!-- end ngRepeat: item in settingCtrl.handicaps --><li class="item_option ng-scope pk_az"  ng-repeat="item in settingCtrl.handicaps" >
+                    <div class="option_k ng-binding" >欧洲盘</div>
+                </li><!-- end ngRepeat: item in settingCtrl.handicaps --><li class="item_option ng-scope pk_mg"  ng-repeat="item in settingCtrl.handicaps" >
+                    <div class="option_k ng-binding" >美国盘</div>
+                </li><!-- end ngRepeat: item in settingCtrl.handicaps --><li class="item_option ng-scope pk_xg active"  ng-repeat="item in settingCtrl.handicaps" >
+                    <div class="option_k ng-binding" >香港盘</div>
+                </li><!-- end ngRepeat: item in settingCtrl.handicaps --><li class="item_option ng-scope pk_ml"  ng-repeat="item in settingCtrl.handicaps" >
+                    <div class="option_k ng-binding" >马来盘</div>
+                </li><!-- end ngRepeat: item in settingCtrl.handicaps -->
+            </ul>
+
+            <!--责任博彩-->
+            <a class="item_option edit_option"  href="vwin.html">
+                <div class="option_k ng-binding" >责任博彩</div>
+                <div class="option_v">&nbsp;</div>
+            </a>
+        </div>
+
+        <div class="account_panel">
+
+            <!--帮助中心-->
+            <!--<a class="item_option edit_option" >
+                <div class="option_k" ></div>
+                <div class="option_v">&nbsp;</div>
+            </a>-->
+
+            <!--条款与条件-->
+            <div class="item_option edit_option"  href="vwin.html">
+                <div class="option_k ng-binding" >条款与条件</div>
+                <div class="option_v">&nbsp;</div>
+            </div>
+
+            <!--优惠活动规则与条款-->
+            <div class="item_option edit_option"  href="vwin.html">
+                <div class="option_k ng-binding" >优惠活动规则与条款</div>
+                <div class="option_v">&nbsp;</div>
+            </div>
+
+            <!--私隐权政策-->
+            <div class="item_option edit_option"  href="vwin.html">
+                <div class="option_k ng-binding" >隐私权政策</div>
+                <div class="option_v">&nbsp;</div>
+            </div>
+
+            <!--在线客服-->
+            <a class="item_option edit_option"  href="vwin.html">
+                <div class="option_k ng-binding" >在线客服</div>
+                <div class="option_v">&nbsp;</div>
+            </a>
+
+            <!--联系我们-->
+            <a class="item_option edit_option"  href="contact.html">
+                <div class="option_k ng-binding" >联系我们</div>
+                <div class="option_v">&nbsp;</div>
+            </a>
+        </div>
+
+        <!--登出-->
+        <div class="account_panel">
+            <div class="item_option edit_option" >
+                <div class="option_k ng-binding" >登出</div>
+            </div>
+        </div>
+    </div><!-- end ngIf: settingCtrl.isDataReady -->
+</div>
+
+
+</body></html>

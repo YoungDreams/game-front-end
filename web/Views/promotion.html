@@ -1,0 +1,310 @@
+<html class="ng-scope">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>优惠</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!--頁面使用REM JS-->
+    <script src="../content/js/rem.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <link rel="stylesheet" href="../content/css/index.css">
+    <!-- end ngIf: !mainCtrl.hideAccountCss -->
+    <link rel="stylesheet" href="../content/css/deposit.css">
+    <link rel="stylesheet" href="../content/css/function.css">
+    <!--<link rel="stylesheet" href="../content/css//reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+</head>
+    <body style="font-size: 12px;">
+        <div class="layout">
+            <!-- uiView:  -->
+            <div ui-view="" class="ng-scope">
+                <div class="layout ng-scope">
+                    <!-- 上面空間 開始 -->
+                    <div header="" title="'promo@latest_offers'|translate" rightfn="promoMasterCtrl.gotoUrl()" class="ng-isolate-scope">
+                        <div class="flex_head">
+                            <div class="header bg_red">
+                                <div class="leng" id="lengBtn">
+                                    <div class="cur_leng">
+                                        <img class="flag" ng-src="../content/images/leng/ch.png" alt="" src="../content/images/leng/ch.png">
+                                        <span class="name ng-binding">简中</span>
+                                        <i class="b_icon"></i>
+                                    </div>
+                                    <ul class="option_leng">
+
+                                        <!-- ngRepeat: lang in listLang track by $index -->
+                                        <li class="item_option ng-scope" >
+                                            <img class="flag" ng-src="../content/images/leng/ch.png" alt="th" src="../content/images/leng/ch.png">
+                                            <span class="name ng-binding">简中</span>
+                                        </li>
+                                        <!-- end ngRepeat: lang in listLang track by $index -->
+                                        <li class="item_option ng-scope" >
+                                            <img class="flag" ng-src="../content/images/leng/en.png" alt="th" src="../content/images/leng/en.png">
+                                            <span class="name ng-binding">English</span>
+                                        </li>
+                                        <!-- end ngRepeat: lang in listLang track by $index -->
+                                        <li class="item_option ng-scope" >
+                                            <img class="flag" ng-src="../content/images/leng/vn.png" alt="th" src="../content/images/leng/vn.png">
+                                            <span class="name ng-binding">Tiếng Việt</span>
+                                        </li>
+                                        <!-- end ngRepeat: lang in listLang track by $index -->
+                                        <li class="item_option ng-scope" >
+                                            <img class="flag" ng-src="../content/images/leng/th.png" alt="th" src="../content/images/leng/th.png">
+                                            <span class="name ng-binding">ภาษาไทย</span>
+                                        </li>
+                                        <!-- end ngRepeat: lang in listLang track by $index -->
+
+                                        <!--<li class="item_option">
+                    <img class="flag" src="../content/images/leng/en.png" alt="th" />
+                    <span class="name">English</span>
+                </li>
+                <li class="item_option">
+                    <img class="flag" src="../content/images/leng/th.png" alt="th" />
+                    <span class="name">Tiếng Việt</span>
+                </li>
+                <li class="item_option">
+                    <img class="flag" src="../content/images/leng/vn.png" alt="vn" />
+                    <span class="name">ภาษาไทย</span>
+                </li>-->
+                                    </ul>
+                                </div>
+                                <!-- ngIf: title == '' -->
+                                <!--<img class="logo"   />-->
+                                <!-- ngIf: title != '' -->
+                                <h3 class="title ng-binding ng-scope">最新优惠</h3>
+                                <!-- end ngIf: title != '' -->
+                                <a class="msg"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 上面空間 結束 -->
+
+                    <!-- ngIf: promoMasterCtrl.dataReady -->
+                    <div class="container dic_panel ng-scope" style="overflow:hidden;">
+
+                        <!-- 選單 -->
+                        <div class="tabs_wrapper">
+                                <div class="deposit_nav">
+                                    <ul class="deposit_tabs">
+                                        <li class="navber_tab ng-binding active"  >全部</li>
+                                        <li class="navber_tab ng-binding"  >存提款</li>
+                                        <li class="navber_tab ng-binding"  >体育</li>
+                                        <li class="navber_tab ng-binding"  >真人娱乐场</li>
+                                        <li class="navber_tab ng-binding"  >彩票</li>
+                                        <li class="navber_tab ng-binding"  >电子游戏</li>
+                                    </ul>
+                                </div>
+                                <a href="" class="next" >
+                                    <img src="styles/image/next_red.png" alt="">
+                                </a>
+                                <a href="" class="prev"  style="display: none;">
+                                    <img src="styles/image/prev_red.png" alt="">
+                                </a>
+                            </div>
+
+
+
+                        <!-- 列表 -->
+                        <div class="dic_list">
+                                <!-- ngRepeat: item in promoMasterCtrl.selectedData -->
+                                <div class="item_dic ng-scope" >
+                                    <a  href="vwin.html">
+                                        <img src="../content/images/Template_visual_636419162619215197.jpg" alt="">
+                                    </a>
+                                </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                    <a  href="vwin.html">
+                                        <img src="../content/images/Template_visual_636419162845236355.jpg" alt="">
+                                    </a>
+                                </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                    <a  href="vwin.html">
+                                        <img src="../content/images/Template_visual_636419163040836802.jpg" alt="">
+                                    </a>
+                                </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                    <a  href="vwin.html">
+                                        <img src="../content/images/Template_visual_636419163384705127.jpg" alt="">
+                                    </a>
+                                </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                    <a  href="vwin.html">
+                                        <img src="../content/images/Template_visual_636419163637163292.jpg" alt="">
+                                    </a>
+                                </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                    <a  href="vwin.html">
+                                        <img src="../content/images/Template_visual_636419163838955010.jpg" alt="">
+                                    </a>
+                                </div>
+                                <!-- ngRepeat: item in promoMasterCtrl.selectedData -->
+                                <div class="item_dic ng-scope" >
+                                        <a  href="vwin.html">
+                                            <img src="../content/images/Template_visual_636419162619215197.jpg" alt="">
+                                        </a>
+                                    </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                        <a  href="vwin.html">
+                                            <img src="../content/images/Template_visual_636419162845236355.jpg" alt="">
+                                        </a>
+                                    </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                        <a  href="vwin.html">
+                                            <img src="../content/images/Template_visual_636419163040836802.jpg" alt="">
+                                        </a>
+                                    </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                        <a  href="vwin.html">
+                                            <img src="../content/images/Template_visual_636419163384705127.jpg" alt="">
+                                        </a>
+                                    </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                        <a  href="vwin.html">
+                                            <img src="../content/images/Template_visual_636419163637163292.jpg" alt="">
+                                        </a>
+                                    </div><!-- end ngRepeat: item in promoMasterCtrl.selectedData --><div class="item_dic ng-scope" >
+                                        <a  href="vwin.html">
+                                            <img src="../content/images/Template_visual_636419163838955010.jpg" alt="">
+                                        </a>
+                                    </div>
+                            </div>
+                    <!-- end ngIf: promoMasterCtrl.dataReady -->
+            </div>
+
+            <!-- ngIf: mainCtrl.showFooter -->
+            <div class="footer ng-scope ng-isolate-scope" footer="">
+                <div class="content box">
+                    <div class="item_nav" ui-sref-active="active" href="#/home">
+                        <a href="index.html">
+                            <i class="icon_home"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">首页</span>
+                            </span>
+                        </a>
+                        <!--<a  >
+            <i class="icon_home"></i>
+            <span class="fixText">Trang<br/>chủ</span>
+        </a>-->
+                    </div>
+                    <!--<div class="item_nav"  ui-sref-active="active">
+        <a >
+            <i class="icon_qianbao"></i>
+            <span class="fixText">{{'footer@wallet'|translate}}</span>
+        </a>
+    </div>-->
+                    <div class="item_nav active" ui-sref-active="active">
+                        <a href="promotion.html">
+                            <i class="icon_youhui"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">优惠</span>
+                            </span>
+                        </a>
+                    </div>
+                    <!-- ngIf: !isLoggedIn() -->
+                    <div class="flex s_nav rig_nav ng-scope">
+                        <a href="register.html">
+                            <span class="fixText ng-binding">注册</span>
+                        </a>
+                    </div>
+                    <!-- end ngIf: !isLoggedIn() -->
+                    <!-- ngIf: isLoggedIn() -->
+                    <!--<div class="flex s_nav ex_nav">
+      <span>存款</span>
+    </div> -->
+                    <!--<div class="item_nav" ui-sref-active="active">
+        <a >
+            <i class="icon_youhui"></i>
+            <span class="fixText">{{'footer@promo'|translate}}</span>
+        </a>
+    </div>-->
+                    <div class="item_nav" ui-sref-active="active" href="#/member/bank">
+                        <a href="bank.html">
+                            <i class="icon_qianbao"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">钱包</span>
+                            </span>
+                        </a>
+                    </div>
+                    <!-- ngIf: !isLogin -->
+                    <div class="item_nav show_panel ng-scope" id="openLogin">
+                        <i class="icon_yonghu"></i>
+                        <span class="fixText">
+                            <span class="ng-binding">登录</span>
+                        </span>
+                    </div>
+                    <!-- end ngIf: !isLogin -->
+                    <!-- ngIf: isLogin -->
+                </div>
+            </div>
+            <!-- end ngIf: mainCtrl.showFooter -->
+            <!-- 登陆 -->
+    <!-- 登录 -->
+            <div id="loginPanel" class="form_panel fixed_form_panel">
+			<div class="panel_mask" style="display: block;"></div>
+			<div class="form">
+				<form ng-init="showPwd='password'" class="ng-valid ng-dirty">
+					<div class="form_group">
+						<input type="text"  name="userName" placeholder="用户名" class="ng-pristine ng-valid">
+					</div>
+					<div class="form_group pwd_group">
+						<input type="text" placeholder="密码" class="ng-valid ng-dirty passwordtxt" style="display:none;">
+						<input type="password" name="password" placeholder="密码" class="ng-valid ng-dirty password1231">
+						<a href="javascript:" class="check_btn material-icons ng-binding" ></a>
+					</div>
+					<!--<div class="form_group code_group">
+						<input type="text" name="code" placeholder="验证码" />
+						<div class="code_box"><img src="styles/image/code.png" alt="" /></div>
+					</div>-->
+					<div class="form_tip ng-binding" ></div>
+					<div class="form_ctl">
+						<label class="label ng-binding">
+							<i class="form_ckeckbox active" >
+								<input type="checkbox" for="c1" ng-checked="mainCtrl.allowLogAccountName" checked="checked">
+							</i>
+							记住用户名
+						</label>
+						<a class="fr forget_pwd ng-binding" >找回密码</a>
+					</div>
+					<div id="login" btn="btn" btnclass="'submit'" btntext="'index@login'|translate" disable="!mainCtrl.accountName.value || !mainCtrl.accountPassword.value" active="" isloading="mainCtrl.isLoading" goto="" clickfunc="mainCtrl.loginSubmit()" class="ng-isolate-scope" style="visibility: visible;">
+            <button type="button" class="button submit" ng-disabled="disable" id="continue-btn"  disabled="disabled">
+                登录
+            </button>
+            <!-- 判断密码显示的眼睛
+            <button type="button" class="button submit ng-hide" ng-disabled="disable" id="continue-btn"  disabled="disabled">
+                <div class="spinner">
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                </div>
+            </button>
+            -->
+        </div>
+        
+                            <!--<button class="submit"></button>-->
+                        </form>
+                        <div class="login_foot ng-binding">没有账号？<a  class="ng-binding" href="register.html">请新建一个账号</a></div>
+                    </div>
+        
+			</div>
+            <!--loading-->
+            <div class="loading_wrap loadingBtn" style="display: none;">
+                <div class="shape">
+                    <span class="loading_logo"></span>
+                    <span class="loading_rotate"></span>
+                    <div class="loading_alert">
+                        <div class="icon success"></div>
+                        <div class="text ng-binding">登录成功!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- js -->
+		<script src="../content/js/jquery-1.7.2.min.js"></script>
+		<script src="../content/js/js.js"></script>
+
+
+    </body>
+
+</html>

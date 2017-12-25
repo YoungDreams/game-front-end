@@ -1,0 +1,179 @@
+<html class="ng-scope">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>个人中心</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!--頁面使用REM JS-->
+
+	<script src="../content/js/rem.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!-- ngIf: !mainCtrl.hideAccountCss -->
+    <link rel="stylesheet" href="../content/css/account.css" class="ng-scope">
+    <!-- end ngIf: !mainCtrl.hideAccountCss -->
+
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+</head>
+
+    <body form-panel-height="" style="font-size: 12px;">
+        <div class="layout">
+            <!-- uiView:  -->
+            <div ui-view="" class="ng-scope">
+                <!-- uiView:  -->
+                <div ui-view="" class="ng-scope">
+                    <div ng-controller="myCtrl as myCtrl" class="ng-scope">
+                        <div class="layout">
+                            <!-- 头部  -->
+                            <div class="account_header bg_shading">
+                                <div class="user_info">
+                                    <div class="face member"></div>
+                                    <div class="name ng-binding">heking520</div>
+                                    <div class="grade ng-binding">member</div>
+                                </div>
+                                <div class="account_info box">
+                                    <div class="flex money ng-binding">￥0.00</div>
+                                    <a class="cun_btn ng-binding" href="deposit.html">存款</a>
+                                </div>
+                                <a class="msg"></a>
+                            </div>
+                            <!-- 头部 结束  -->
+                            <div class="container">
+                                <div class="option_panel">
+                                    <!-- ngIf: myCtrl.currencyID !== 18 -->
+                                    <a href="" class="tip_link ng-binding ng-scope">会员晋级即可领取￥168</a>
+                                    <!-- end ngIf: myCtrl.currencyID !== 18 -->
+                                    <ul class="option_list clearfix">
+
+                                        <!--个人资料-->
+                                        <li class="item_option">
+                                            <a href="profile.html">
+                                                <i class="icon_grzl"></i>
+                                                <span class="name ng-binding">个人资料</span>
+                                            </a>
+                                        </li>
+
+                                        <!--红利领取-->
+                                        <li class="item_option active">
+                                            <a href="dividend.html">
+                                                <i class="icon_hllq"></i>
+                                                <span class="name ng-binding">红利领取</span>
+                                            </a>
+                                        </li>
+
+                                        <!--消息盒子-->
+                                        <li class="item_option">
+                                            <a href="message.html">
+                                                <i class="icon_xxhz"></i>
+                                                <span class="name ng-binding">消息盒子</span>
+                                            </a>
+                                        </li>
+
+                                        <!--皇家俱乐部-->
+                                        <li class="item_option">
+                                            <a href="#">
+                                                <i class="icon_hjjlb"></i>
+                                                <span class="name ng-binding">皇家俱乐部</span>
+                                            </a>
+                                        </li>
+
+                                        <!--分享赚钱-->
+                                        <li class="item_option">
+                                            <a href="friend.html">
+                                                <i class="icon_fxzq"></i>
+                                                <span class="name ng-binding">分享赚钱</span>
+                                            </a>
+                                        </li>
+
+                                        <!--账户安全-->
+                                        <li class="item_option">
+                                            <a href="security.html">
+                                                <i class="icon_zhaq"></i>
+                                                <span class="name ng-binding">账户安全</span>
+                                            </a>
+                                        </li>
+
+                                        <!--关于我们-->
+                                        <li class="item_option">
+                                            <a href="vwin.html">
+                                                <i class="icon_gywm"></i>
+                                                <span class="name ng-binding">关于我们</span>
+                                            </a>
+                                        </li>
+
+                                        <!--系统设置-->
+                                        <li class="item_option">
+                                            <a href="setting.html">
+                                                <i class="icon_xtsz"></i>
+                                                <span class="name ng-binding">系统设置</span>
+                                            </a>
+                                        </li>
+
+                                        <li class="item_option"></li>
+                                        <li class="item_option"></li>
+                                        <li class="item_option"></li>
+                                    </ul>
+                                </div>
+                                <div class="gg_panel">
+                                    <a href="promotion.html">
+                                        <img ng-src="../content/images/zh-cn.png" alt="" src="../content/images/zh-cn.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部导航 -->
+            <div class="footer ng-scope ng-isolate-scope" footer="">
+                <div class="content box">
+                    <div class="item_nav" ui-sref-active="active" href="#/home">
+                        <a href="index.html">
+                            <i class="icon_home"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">首页</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item_nav" ui-sref-active="active">
+                        <a href="promotion.html">
+                            <i class="icon_youhui"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">优惠</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="flex s_nav rig_nav ng-scope">
+                        <a href="deposit.html">
+                            <span class="fixText">
+                                <span class="ng-binding">存款</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item_nav" ui-sref-active="active" href="#/member/bank">
+                        <a href="bank.html">
+                            <i class="icon_qianbao"></i>
+                            <span class="fixText">
+                                <span class="ng-binding">钱包</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item_nav show_panel ng-scope active unread" ui-sref-active="active" href="#/member/my">
+                        <i class="icon_yonghu"></i>
+                        <span class="fixText" href="#/member/my">
+                            <span class="ng-binding">个人中心</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+           
+    </body>
+
+</html>

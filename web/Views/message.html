@@ -1,0 +1,125 @@
+<html class="ng-scope">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>消息盒子</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta content="blank" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <!--頁面使用REM JS-->
+
+	<script src="../content/js/rem.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../content/css/common.css">
+    <!-- ngIf: !mainCtrl.hideAccountCss -->
+    <link rel="stylesheet" href="../content/css/account.css" class="ng-scope">
+    <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
+    <link rel="stylesheet" href="../content/css/wallet.css">
+    <link rel="stylesheet" href="../content/css/recommend.css">
+</head>
+    <body style="font-size: 12px;" class="">
+        <div class="layout">
+            <!-- uiView:  -->
+            <div ui-view="" class="ng-scope">
+                <!-- uiView:  -->
+                <div ui-view="" class="ng-scope">
+                    <!-- uiView:  -->
+                    <div ui-view="" class="ng-scope">
+                        <div class="layout ng-scope">
+                            <!-- 顶部 開始 -->
+                            <div class="flex_head ng-isolate-scope" header-back="" headerclass="'bg_red'" title="'account_message@title'|translate" backfn="messageCtrl.back()"
+                                rightclass="'msg'" righttext="" rightfn="messageCtrl.gotoUrl()">
+                                <div class="header bg_red">
+                                    <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                                    <h3 class="title ng-binding">消息盒子</h3>
+                                    <a href="#" class="msg"></a>
+                                </div>
+                            </div>
+                            <!-- 顶部 結束 -->
+                            <div class="container">
+                                <!-- ngIf: messageCtrl.messages.length < 1 -->
+                                <!-- ngIf: messageCtrl.messages.length > 0 -->
+                                <div class="message_list ng-scope">
+                                    <!-- ngRepeat: item in messageCtrl.messages -->
+                                    <div class="item_message ng-scope" >
+                                        <a href="vwin.html">
+                                            <div class="msg_title ng-binding">关于“网银转账”和“支付宝转银行卡”存款方式的重要说明
+                                                <span class="time ng-binding">11/06</span>
+                                            </div>
+                                            <p class="cont ng-binding">亲爱的Vwin德赢用户您好，在使用“网银转账”和“支付宝转银行卡”存款方式进行存款时，您每次获取的银行账号都可能会不同，请务必存款入您当次获取的账号，切勿使用过往保存的账号进行存款。若存入账号与本次获取账号不一致时将无法上分。感谢您的配合。祝您一本万利，好运连连。</p>
+                                        </a>
+                                    </div>
+                                    <!-- end ngRepeat: item in messageCtrl.messages -->
+                                    <div class="item_message ng-scope" >
+                                        <a href="vwin.html">
+                                            <div class="msg_title ng-binding">女仆宝贝Luna温暖您的十一月
+                                                <span class="time ng-binding">11/01</span>
+                                            </div>
+                                            <p class="cont ng-binding">天气越来越冷了，除了多穿衣，还可以让身材劲爆的女仆宝贝露娜温暖您~要无辜求安抚的眼神？有！要翘臀？有！要傲人爆乳？还是有！香艳无边的身段，无辜可人的表情，让露娜好好服侍小哥哥吧~德赢祝您一本万利，财源广进，吉祥如意！</p>
+                                        </a>
+                                    </div>
+                                    <!-- end ngRepeat: item in messageCtrl.messages -->
+                                    <div class="item_message ng-scope" >
+                                        <a href="vwin.html">
+                                            <div class="msg_title ng-binding">十月恶魔宝贝Sunny和您一起过节啦
+                                                <span class="time ng-binding">10/01</span>
+                                            </div>
+                                            <p class="cont ng-binding">国庆月来到，Sunny来报道，雪肤丰乳美臀展现秀美身材，私密黑丝上演全裸诱惑。乳晕粉红浑圆腰肢纤细，性感E罩杯玲珑身材。弄乱你的心，更要弄乱你的床，快来和恶魔宝贝Sunny一起度过浪漫的国庆长假~德赢祝您一本万利，财源广进，吉祥如意！</p>
+                                        </a>
+                                    </div>
+                                    <!-- end ngRepeat: item in messageCtrl.messages -->
+                                    <div class="item_message ng-scope" >
+                                        <a href="vwin.html">
+                                            <div class="msg_title ng-binding">Vwin德赢祝您国庆快乐！
+                                                <span class="time ng-binding">09/29</span>
+                                            </div>
+                                            <p class="cont ng-binding">尊敬的Vwin德赢用户您好：缘分就是，中秋遇上国庆，您遇到德赢。但愿我短短的祝福带给您频频的好运，祝您国庆快乐，中秋团圆！希望每一个节日德赢都在您的身边陪伴您~国庆月新优惠1号震撼上线，敬请期待哦~
+                                                Vwin德赢敬上</p>
+                                        </a>
+                                    </div>
+                                    <!-- end ngRepeat: item in messageCtrl.messages -->
+                                    <div class="item_message ng-scope" >
+                                        <a href="vwin.html">
+                                            <div class="msg_title ng-binding">九月赛车宝贝琪琪邀您共享速度与激情
+                                                <span class="time ng-binding">08/31</span>
+                                            </div>
+                                            <p class="cont ng-binding">金秋九月，赛车宝贝琪琪性感来袭。车速太快，要坐稳咯。娇喘妩媚，眼神迷离腰肢柔软纤细，盈盈一握身段窈窕玲珑，凹凸必现翘臀坚挺浑圆，双乳巍然高耸。全身写满邀请的琪琪等您共享良辰哦~祝您一本万利，财源广进，吉祥如意！</p>
+                                        </a>
+                                    </div>
+                                    <!-- end ngRepeat: item in messageCtrl.messages -->
+                                    <div class="item_message ng-scope" >
+                                        <a href="vwin.html">
+                                            <div class="msg_title ng-binding">八月性感兔女郎清凉上阵
+                                                <span class="time ng-binding">08/02</span>
+                                            </div>
+                                            <p class="cont ng-binding">浪漫七夕月，八月兔女郎小漾豪乳侧漏陪您过七夕！妖娆身姿，动若拂柳蜂腰翘臀，曲线玲珑。巨乳挣扎欲出，小漾包不住的诱惑惊爆您的眼球！唔，小漾为您准备了七夕礼物，要温柔的打开哦~
+                                                Vwin德赢祝您一本万利，财源广进，吉祥如意！</p>
+                                        </a>
+                                    </div>
+                                    <!-- end ngRepeat: item in messageCtrl.messages -->
+                                    <div class="item_message ng-scope" >
+                                        <a href="vwin.html">
+                                            <div class="msg_title ng-binding">八月性感兔女郎清凉上阵
+                                                <span class="time ng-binding">07/31</span>
+                                            </div>
+                                            <p class="cont ng-binding">浪漫七夕月，八月兔女郎小漾豪乳侧漏陪您过七夕！妖娆身姿，动若拂柳蜂腰翘臀，曲线玲珑。巨乳挣扎欲出，小漾包不住的诱惑惊爆您的眼球！唔，小漾为您准备了七夕礼物，要温柔的打开哦~
+                                                Vwin德赢祝您一本万利，财源广进，吉祥如意！</p>
+                                        </a>
+                                    </div>
+                                    <!-- end ngRepeat: item in messageCtrl.messages -->
+                                </div>
+                                <!-- end ngIf: messageCtrl.messages.length > 0 -->
+                            </div>
+                            <!-- ngIf: messageCtrl.showMoreButton -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+    </body>
+
+</html>
