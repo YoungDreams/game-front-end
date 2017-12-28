@@ -158,6 +158,95 @@
 
 
 
+(function(){
+	
+	/* 钱包 -存款 */
+	
+	$("#opanpayment").on("touchstart",function(){
+		$("#form_panel").addClass("active");
+		$("#payment").addClass("block");
+	});
+	
+	$(".close").on("touchstart",function(e){
+		$("#form_panel").removeClass("active");
+		$("#payment").removeClass("block");
+		e.preventDefault()
+	});
+	
+})();
+(function(){
+	
+	/* 钱包 -存款 */ 
+	
+	$("#opanbank").on("touchstart",function(){
+		$("#form_panel").addClass("active");
+		$("#bank").addClass("block");
+	});
+	
+	$(".close").on("touchstart",function(e){
+		$("#form_panel").removeClass("active");
+		$("#bank").removeClass("block");
+		e.preventDefault()
+	});
+	
+})();
+
+(function(){
+
+	/* 钱包 -存款 */
+	
+	$("#opanqq").on("touchstart",function(){
+		$("#form_panel").addClass("active");
+		$("#qq").addClass("block");
+	});
+	
+	$(".close").on("touchstart",function(e){
+		$("#form_panel").removeClass("active");
+		$("#qq").removeClass("block");
+		e.preventDefault()
+	});
+	
+})();
+
+
+
+
+(function(){
+	
+		/* 钱包 -存款 */
+		
+		$("#opanbox").on("touchstart",function(){
+			$("#form_panel").addClass("active");
+			$("#box").addClass("block");
+		});
+		
+		$(".close").on("touchstart",function(e){
+			$("#form_panel").removeClass("active");
+			$("#box").removeClass("block");
+			e.preventDefault()
+		});
+		
+	})();
+
+
+	(function(){
+		
+			/* 钱包 -存款 */
+			
+			$("#opanWeChat").on("touchstart",function(){
+				$("#form_panel").addClass("active");
+				$("#WeChat").addClass("block");
+			});
+			
+			$(".close").on("touchstart",function(e){
+				$("#WeChat").removeClass("active");
+				$("#WeChat").removeClass("block");
+				e.preventDefault()
+			});
+			
+		})();
+
+
 
 
 

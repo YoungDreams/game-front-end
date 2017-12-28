@@ -1,4 +1,4 @@
-<html  class="ng-scope">
+<html class="ng-scope">
 
 <head>
     <style type="text/css">
@@ -36,7 +36,7 @@
     <meta content="telephone=no" name="format-detection">
     <!--頁面使用REM JS-->
 
-	<script src="../content/js/rem.js"></script>
+    <script src="../content/js/rem.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../content/css/common.css">
     <link rel="stylesheet" href="../content/css/index.css">
@@ -51,7 +51,7 @@
             <div ui-view="" class="ng-scope">
                 <div class="flex_head ng-scope">
                     <div class="header bg_red">
-                        <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                            <a href="javascript:history.back()" class="back ng-binding">返回</a>
                         <div class="logo"></div>
                         <!--<img class="logo" src="../content/image/logo.png" alt="logo" />-->
                         <a class="msg"></a>
@@ -62,28 +62,21 @@
                         <form action="" class="register_form ng-pristine ng-valid">
 
                             <div class="form_group">
-                                <input type="text" id="registerName" name="userName" placeholder="用户名(由8-16个字母和数字构成)" class="ng-pristine ng-valid">
+                                <input type="text" id="tb_userid" name="userName" placeholder="用户名(由8-16个字母和数字构成)" class="ng-pristine ng-valid">
                             </div>
                             <div class="form_group">
-                                <input type="password" id="registerPassword" name="pwd" placeholder="密码(由6-20个字母、数字或特殊字符构成)" class="ng-pristine ng-valid">
+                                <input type="password" id="tb_password" name="pwd" placeholder="密码(由6-20个字母、数字或特殊字符构成)" class="ng-pristine ng-valid">
                             </div>
                             <div class="form_group">
                                 <input type="password" id="registerPasswordRepeat" name="pwdRepeat" placeholder="确认密码(您两次输入的密码需一致)" class="ng-pristine ng-valid">
                             </div>
                             <div class="form_group">
-                                <select ng-options="item as item.name for item in registerCtrl.area" class="ng-pristine ng-valid">
-                                    <option value="0" selected="selected" label="中国 +86">中国 +86</option>
-                                    <option value="1" label="越南 +84">越南 +84</option>
-                                    <option value="2" label="泰国 +66">泰国 +66</option>
-                                </select>
-                            </div>
-                            <div class="form_group">
-                                <input type="tel" name="phonecode" placeholder="手机号码(用于取回账户密码)" class="ng-pristine ng-valid">
+                                <input id="tb_contact" type="tel" name="phonecode" placeholder="手机号码(用于取回账户密码)" class="ng-pristine ng-valid">
                             </div>
                             <div class="form_group">
                                 <!-- ngIf: !registerCtrl.couponCode.displayValue -->
-                                <input type="text" name="code" ng-change="registerCtrl.couponCode.checkValid()" placeholder="代理代码(如没有请留空)"
-                                    ng-disabled="registerCtrl.couponCode.autoSet" class="ng-scope ng-pristine ng-valid">
+                                <input type="text" name="code" ng-change="registerCtrl.couponCode.checkValid()" placeholder="代理代码(如没有请留空)" ng-disabled="registerCtrl.couponCode.autoSet"
+                                    class="ng-scope ng-pristine ng-valid">
                                 <!-- end ngIf: !registerCtrl.couponCode.displayValue -->
                                 <!-- ngIf: registerCtrl.couponCode.displayValue -->
                             </div>
@@ -91,26 +84,290 @@
                             <!-- ngIf: registerCtrl.correctMsg!='' && registerCtrl.couponCode.valid -->
                             <div class="form_ctl">
                                 <label class="label ng-binding">
-                                    <input type="checkbox" name="jz" class="ng-pristine ng-valid">如果您同意我们的条件和条款，且年满18岁，请勾选</label>
+                                    <input id="chkAgree" type="checkbox" name="jz" class="ng-pristine ng-valid">如果您同意我们的条件和条款，且年满18岁，请勾选</label>
                             </div>
 
                             <div btn="" btnclass="'submit'" btntext="'register@register'|translate" disable="registerCtrl.lockBtn" active="" isloading=""
                                 goto="" clickfunc="registerCtrl.onSubmitClick()" class="ng-isolate-scope">
-                                <button type="button" class="button submit" ng-disabled="disable" id="continue-btn" ng-hide="isloading">
+                                <button type="button" class="button submit" id="btnGameSubmit">
                                     注册
                                 </button>
-                                <button type="button" class="button submit ng-hide" ng-disabled="disable" id="continue-btn" ng-show="isloading">
+                                <!-- <button type="button" class="button submit">
                                     <div class="spinner">
                                         <div class="dot1"></div>
                                         <div class="dot2"></div>
                                     </div>
-                                </button>
+                                </button> -->
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+            <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+            <script>
+                /* 用户名 */
+	$('#tb_userid').bind('input propertychange', function() {
+		var tb_userid = $("#tb_userid").val();
+		if(!reg.userReg.test(tb_userid) || tb_userid == ''){
+			document.getElementById("li_userid1").className = 'icon_er1';
+			document.getElementById("li_userid2").className = 'icon_er1';
+			document.getElementById("li_userid3").className = 'icon_er1';
+			return false;
+		}
+		
+		document.getElementById("li_userid1").className = 'icon_er2';
+		document.getElementById("li_userid2").className = 'icon_er2';
+		
+		/* 验证用户名是否被注册 */
+		
+		$.ajax({
+			type: "post",
+			url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+			dataType: "json",
+			async:false,
+			data : {
+				Method:"CheckAccount",
+				Account:"demo01"
+			},
+			success: function (data) {
+				console.log(data);
+				if(data.code != 0){
+					document.getElementById("li_userid3").className = 'icon_er1';
+					reg.isuserReg = false;
+				}else{
+					document.getElementById("li_userid3").className = 'icon_er2';
+					reg.isuserReg = true;
+				}
+			}
+		});
+	});  
+		
 
+	/* 密码 */
+
+
+	$('#tb_password').bind('input propertychange', function() {
+		var tb_password = $("#tb_password").val();
+		// console.log(tb_password)
+		
+		if(tb_password.length <6 || tb_password.length>20){
+			document.getElementById("li_password1").className = 'icon_er1';
+			return false;
+		}else{
+			document.getElementById("li_password1").className = 'icon_er2';
+		}
+		
+		
+		if(!reg.pwdReg.test(tb_password)){
+			document.getElementById("li_password2").className = 'icon_er1';
+			return false;
+		}
+		document.getElementById("li_password2").className = 'icon_er2';
+		
+		/* 验证用户名是否被注册 */
+		
+		reg.ispwdReg = true;
+	});  
+
+	$('#tb_passwordcof').bind('focus', function() {
+		var tb_passwordcof = $("#tb_passwordcof").val();
+		var tb_password = $("#tb_password").val();
+		if(tb_password != tb_passwordcof || tb_password.length <6 || tb_password.length>20){
+
+			document.getElementById("li_passwordcof1").className = 'icon_er1';
+			reg.ispwdRegcof = false;
+		}else{
+			document.getElementById("li_passwordcof1").className = 'icon_er2';
+			reg.ispwdRegcof = true;
+		}
+	});
+
+	/* 重复密码 */
+
+	$('#tb_passwordcof').bind('input propertychange', function() {
+		var tb_passwordcof = $("#tb_passwordcof").val();
+		var tb_password = $("#tb_password").val();
+		if(tb_password != tb_passwordcof || tb_password.length <6 || tb_password.length>20){
+
+			document.getElementById("li_passwordcof1").className = 'icon_er1';
+			reg.ispwdRegcof = false;
+		}else{
+			document.getElementById("li_passwordcof1").className = 'icon_er2';
+			reg.ispwdRegcof = true;
+		}
+	});  
+
+
+	/* 手机号验证 */
+
+	$('#tb_contact').bind('input propertychange', function() {
+		var tb_contact = $("#tb_contact").val();
+		
+		if(!reg.phone.test(tb_contact)){
+			document.getElementById("li_mobile").className = 'icon_er1';
+			return false;
+		}
+		document.getElementById("li_mobile").className = 'icon_er2';
+		
+		/* 验证用户名是否被注册 */
+		reg.isphone = true;
+	});  
+
+
+	
+	/* 发送验证码 */
+	$("#fasongyanzm").on("click",function(){
+		var tb_contact = $("#tb_contact").val();
+		if(!reg.isphone){
+			$("#tb_contact").focus();
+			return false;
+		}
+		
+		/* 验证 手机号唯一性 */
+		$.ajax({
+			type: "post",
+			url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+			dataType: "json",
+			async:false,
+			data : {
+				Method:"CheckPhone",
+				Phone:tb_contact
+			},
+			success: function (data) {
+				// console.log(data);
+				if(data.Code != 0){
+					alert(data.Message);
+				}else{
+					function invokeSettime(obj){
+						var countdown=60;
+						settime(obj);
+						function settime(obj) {
+							if (countdown == 0) {
+								$(obj).attr("disabled",false);
+								$(obj).text("获取验证码");
+								countdown = 60;
+								return;
+							} else {
+								$(obj).attr("disabled",true);
+								$(obj).text("("+countdown+")s重新发送");
+								countdown--;
+							}
+							setTimeout(function() {
+										settime(obj) }
+									,1000)
+						}
+					}
+
+					new invokeSettime("#fasongyanzm");
+					
+					/* 发送手机验证码 */
+					$.ajax({
+						type: "post",
+						url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+						dataType: "json",
+						async:false,
+						data : {
+							Method:"SSMSV",
+							Phone:tb_contact
+						},
+						success: function (data) {
+							console.log(data);
+							if(data.Code != 0){
+								alert(data.Message);
+							}else{
+								alert('验证码发送成功...');
+							}
+						}
+					});
+					
+				}
+			}
+		});
+	})
+
+                /* 立即注册 */
+                $("#btnGameSubmit").on("click", function () {
+
+                    var tb_userid = $("#tb_userid").val(); //用户名
+                    var tb_password = $("#tb_password").val(); //	密码
+                    var Phone = $("#tb_contact").val(); //发送验证码
+                    var tb_useridzs = $("#tb_useridzs").val(); //真实姓名
+                    var Pcode = $("#tb_affiliatecode").val(); //验证码
+
+
+
+
+                    // if (!tb_userid) {
+                    //     $("#tb_userid").focus();
+                    //     return false;
+                    // }
+
+                    // if (tb_useridzs == '') {
+                    //     $("#tb_useridzs").focus();
+                    //     return false;
+                    // }
+
+                    // if (!reg.ispwdReg) {
+                    //     $("#tb_password").focus();
+                    //     return false;
+                    // }
+                    // if (!reg.ispwdRegcof) {
+                    //     $("#tb_passwordcof").focus();
+                    //     return false;
+                    // }
+                    // if (!reg.isphone) {
+                    //     $("#tb_contact").focus();
+                    //     return false;
+                    // }
+
+
+                    // if (!$("#chkAgree").hasClass('icon-checkbox-checked')) {
+                    //     $(".ui-msg-text").show();
+                    //     return false;
+                    // } else {
+                    //     $(".ui-msg-text").hide();
+                    // }
+
+                    /* 用户注册 */
+                    $.ajax({
+                        type: "post",
+                        url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+                        dataType: "json",
+                        async: false,
+                        data: {
+                            Method: "Register",
+                            Account: tb_userid,
+                            Password: tb_password,
+                            Pcode: Pcode,
+                            Phone: Phone,
+                            ReName: tb_useridzs
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            if (data.Code != 0) {
+                                alert(data.Message);
+                            } else {
+                                alert('注册成功');
+                                $(".register-step-2").css("float", "right");
+                                $(".register-step-3").css("float", "left");
+
+                                $("#popup-style-1").hide();
+                                $("#login_last").show();
+                                $("#Nickname").html(tb_userid);
+
+                                setTimeout(function () {
+                                    $(".popup-style-1").slideUp("fast", function () {
+                                        $(".layer-style-1").removeClass(
+                                                "img-bg-finish"), $("#registerPage")
+                                            .css("left", 0)
+                                    });
+                                }, 1000);
+                            }
+                        }
+                    });
+
+                });
+            </script>
 
     </body>
 

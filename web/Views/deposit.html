@@ -47,148 +47,514 @@
 
 
 </head>
-    <body style="font-size: 12px;" class="bg_gray">
-        <div class="layout">
+
+<body style="font-size: 12px;" class="bg_gray">
+    <div class="layout">
+        <div ui-view="" class="ng-scope">
             <div ui-view="" class="ng-scope">
-                <div ui-view="" class="ng-scope">
-                    <!-- 顶部 -->
-                    <div class="flex_head">
-                        <div class="header bg_red">
-                            <a href="javascript:history.back()" class="back ng-binding">返回</a>
-                            <h3 class="title ng-binding">存款</h3>
-                            <a href="#" class="msg"></a>
-                        </div>
+                <!-- 顶部 -->
+                <div class="flex_head">
+                    <div class="header bg_red">
+                        <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                        <h3 class="title ng-binding">存款</h3>
+                        <a href="#" class="msg"></a>
                     </div>
-                    <div class="container ng-scope" style="overflow:hidden;">
-                        <div class="tabs_wrapper">
-                            <!-- 标题 -->
-                            <div id="deposit_nav" class="deposit_nav ng-scope">
-                                <ul class="deposit_tabs">
-                                    <li class="navber_tab ng-binding ng-scope active">在线支付</li>
-                                    <li class="navber_tab ng-binding ng-scope">快捷支付</li>
-                                    <li class="navber_tab ng-binding ng-scope">QQ扫码</li>
-                                    <li class="navber_tab ng-binding ng-scope">微信扫码</li>
-                                    <li class="navber_tab ng-binding ng-scope">比特币支付</li>
+                </div>
+                <div class="container ng-scope" style="overflow:hidden;">
+                    <div class="tabs_wrapper">
+                        <!-- 标题 -->
+                        <div id="deposit_nav" class="deposit_nav ng-scope">
+                            <ul class="deposit_tabs">
+                                <li class="navber_tab ng-binding ng-scope active">在线支付</li>
+                                <li class="navber_tab ng-binding ng-scope">快捷支付</li>
+                                <li class="navber_tab ng-binding ng-scope">QQ扫码</li>
+                                <li class="navber_tab ng-binding ng-scope">微信扫码</li>
+                                <li class="navber_tab ng-binding ng-scope">比特币支付</li>
+                            </ul>
+                        </div>
+                        <!-- 箭头 -->
+                        <a href="" class="next">
+                            <img src="../content/image/next_red.png" alt="">
+                        </a>
+                        <a href="" class="prev" style="display: none;">
+                            <img src="../content/image/prev_red.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- 在线支付 -->
+                    <div ui-view="online" class="ng-scope">
+                        <!-- 填寫訂單頁 -->
+                        <div class="deposit_panel active ng-scope">
+                            <div class="enter_panel">
+                                <!-- 選擇在線支付方式 -->
+                                <div class="select_card box" id="opanpayment">
+                                    <div class="label ng-binding">支付通道</div>
+                                    <div class="flex show_panel">
+                                        <div class="">
+                                            <b class="ng-binding">请选择支付通道</b>
+                                            <i class="icon_d"></i>
+                                        </div>
+                                        <div class="ng-hide">
+                                            <b class="ng-binding">通道一</b>
+                                            <i class="icon_d"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 選擇銀行 (Asia)  -->
+                                <!-- ngIf: depositCtrl.method == 'online' -->
+                                <div id="opanbank" class="select_card box ng-scope">
+                                    <div class="label ng-binding">银行</div>
+                                    <div class="flex show_panel">
+                                        <div class="">
+                                            <!--<img class="card_logo"  alt="">-->
+                                            <b class="ng-binding">请选择银行</b>
+                                            <i class="icon_d"></i>
+                                        </div>
+                                        <div class="ng-hide">
+                                            <!-- ngIf: depositCtrl.bank.image -->
+                                            <b class="ng-binding"></b>
+                                            <i class="icon_d"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 金額 -->
+                                <div class="enter_p box">
+                                    <div class="label ng-binding">金额</div>
+                                    <div class="flex ng-scope">
+                                        <div number-input="" hint="'bank@please_enter' | translate" hint1="depositCtrl.limit.online.min | currencyFix:0" hint2="'-'"
+                                            hint3="depositCtrl.limit.online.max|currencyFix:0" hint4="'bank@please_enter1' | translate"
+                                            ngmodel="depositCtrl.amount" class="ng-isolate-scope">
+                                            <input type="tel" class="" placeholder="请输入100-30,000">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip"></div>
+                            <!-- 按钮 -->
+                            <div class="btn_p">
+                                <div btn="" btnclass="'red_button'" btntext="'member_bank_deposit@next' | translate" disable="" active="" isloading="depositCtrl.lockBtn"
+                                    goto="" clickfunc="depositCtrl.createOrder()" class="ng-isolate-scope">
+                                    <button type="button" class="button red_button" ng-disabled="disable" id="continue-btn" ng-hide="isloading">
+                                        立即存款
+                                    </button>
+                                    <button type="button" class="button red_button ng-hide" ng-disabled="disable" id="continue-btn">
+                                        <div class="spinner">
+                                            <div class="dot1"></div>
+                                            <div class="dot2"></div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- 溫馨提示 -->
+                            <div class="note">
+                                <div class="tt"></div>
+                                <ul>
                                 </ul>
                             </div>
-                            <!-- 箭头 -->
-                            <a href="" class="next">
-                                <img src="../content/image/next_red.png" alt="">
-                            </a>
-                            <a href="" class="prev" style="display: none;">
-                                <img src="../content/image/prev_red.png" alt="">
-                            </a>
                         </div>
+                        <!-- end ngIf: depositCtrl.stateOrder -->
 
-                        <!-- 内容 -->
-                        <div ui-view="online" class="ng-scope">
-                            <!-- 填寫訂單頁 -->
-                            <div class="deposit_panel active ng-scope">
-                                <div class="enter_panel">
-                                    <!-- 選擇在線支付方式 -->
-                                    <div class="select_card box">
-                                        <div class="label ng-binding">支付通道</div>
-                                        <div class="flex show_panel">
-                                            <div ng-show="!depositCtrl.checkedChannellist" class="">
-                                                <b class="ng-binding">请选择支付通道</b>
-                                                <i class="icon_d"></i>
-                                            </div>
-                                            <div ng-show="depositCtrl.checkedChannellist" class="ng-hide">
-                                                <b class="ng-binding">通道一</b>
-                                                <i class="icon_d"></i>
-                                            </div>
+                        <!-- 確認訂單頁 -->
+                        <!-- ngIf: depositCtrl.stateConfirm -->
+
+
+                        <!--online-paysec-->
+                        <div id="paysecDiv" class="ng-scope ng-hide">
+                            <form id="paysecForm" class="ng-pristine ng-valid">
+                                <input type="hidden" name="token" value="">
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 快捷支付 -->
+                    <div style="display: none;" ui-view="quick" ng-if="(depositCtrl.method === 'quick' || depositCtrl.method === 'quick_paysec' ||depositCtrl.method === 'quick_qaicash') &amp;&amp; !depositCtrl.fakeLightBox.show"
+                        class="ng-scope">
+                        <!-- 填寫訂單頁 -->
+                        <!-- ngIf: depositCtrl.stateOrder -->
+                        <div class="deposit_panel active ng-scope" ng-if="depositCtrl.stateOrder">
+                            <div class="enter_panel">
+                                <!-- 選擇快捷支付方式 -->
+                                <div id="opanbox" class="select_card box">
+                                    <div class="label ng-binding">支付通道</div>
+                                    <div class="flex show_panel" ng-click="depositCtrl.openPanel(true, 'quick')">
+                                        <div ng-show="!depositCtrl.checkedChannellist" class="">
+                                            <b class="ng-binding">请选择支付通道</b>
+                                            <i class="icon_d"></i>
+                                        </div>
+                                        <div ng-show="depositCtrl.checkedChannellist" class="ng-hide">
+                                            <b class="ng-binding">通道二</b>
+                                            <i class="icon_d"></i>
                                         </div>
                                     </div>
-                                    <!-- 選擇銀行 (Asia)  -->
-                                    <!-- ngIf: depositCtrl.method == 'online' -->
-                                    <div class="select_card box ng-scope">
-                                        <div class="label ng-binding">银行</div>
-                                        <div class="flex show_panel">
-                                            <div ng-show="!depositCtrl.checkedBanklist" class="">
-                                                <!--<img class="card_logo" ng-src="../content/image/bank/000-000.png" alt="">-->
-                                                <b class="ng-binding">请选择银行</b>
-                                                <i class="icon_d"></i>
-                                            </div>
-                                            <div ng-show="depositCtrl.checkedBanklist" class="ng-hide">
-                                                <!-- ngIf: depositCtrl.bank.image -->
-                                                <b class="ng-binding"></b>
-                                                <i class="icon_d"></i>
-                                            </div>
+                                </div>
+                                <!-- 金額 -->
+                                <div class="enter_p box">
+                                    <div class="label ng-binding">金额</div>
+                                    <!-- ngIf: depositCtrl.method == 'quick' -->
+                                    <!-- ngIf: depositCtrl.method == 'quick_paysec' -->
+                                    <div class="flex ng-scope" ng-if="depositCtrl.method == 'quick_paysec'">
+                                        <div number-input="" hint="'bank@please_enter' | translate" hint1="depositCtrl.limit.quick_paysec.min | currencyFix:0" hint2="'-'"
+                                            hint3="depositCtrl.limit.quick_paysec.max|currencyFix:0" hint4="'bank@please_enter1' | translate"
+                                            ngmodel="depositCtrl.amount" class="ng-isolate-scope">
+                                            <input type="tel" class="" placeholder="请输入100-5,000" ng-model="ngmodel">
                                         </div>
                                     </div>
-                                    <!-- 金額 -->
-                                    <div class="enter_p box">
-                                        <div class="label ng-binding">金额</div>
-                                        <!-- ngIf: depositCtrl.method == 'online' -->
-                                        <div class="flex ng-scope">
-                                            <div number-input="" hint="'bank@please_enter' | translate" hint1="depositCtrl.limit.online.min | currencyFix:0" hint2="'-'"
-                                                hint3="depositCtrl.limit.online.max|currencyFix:0" hint4="'bank@please_enter1' | translate"
-                                                ngmodel="depositCtrl.amount" class="ng-isolate-scope">
-                                                <input type="tel" class="" placeholder="请输入100-30,000">
-                                            </div>
+                                    <!-- end ngIf: depositCtrl.method == 'quick_paysec' -->
+                                    <!-- ngIf: depositCtrl.method == 'quick_qaicash' -->
+                                </div>
+                            </div>
+                            <div class="tip"></div>
+                            <div class="btn_p">
+                                <div btn="" btnclass="'red_button'" btntext="'member_bank_deposit@next' | translate" disable="!depositCtrl.amount" active=""
+                                    isloading="depositCtrl.lockBtn" goto="" clickfunc="depositCtrl.createOrder()" class="ng-isolate-scope">
+                                    <button type="button" class="button red_button" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-hide="isloading"
+                                        disabled="disabled">
+                                        立即存款
+                                    </button>
+                                    <button type="button" class="button red_button ng-hide" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-show="isloading"
+                                        disabled="disabled">
+                                        <div class="spinner">
+                                            <div class="dot1"></div>
+                                            <div class="dot2"></div>
                                         </div>
-                                        <!-- end ngIf: depositCtrl.method == 'online' -->
-                                        <!-- ngIf: depositCtrl.method == 'online_paysec' -->
-                                        <!-- ngIf: depositCtrl.method == 'online_qaicash' -->
-                                    </div>
-                                </div>
-                                <div class="tip"></div>
-                                <!-- 按钮 -->
-                                <div class="btn_p">
-                                    <div btn="" btnclass="'red_button'" btntext="'member_bank_deposit@next' | translate" disable="" active="" isloading="depositCtrl.lockBtn"
-                                        goto="" clickfunc="depositCtrl.createOrder()" class="ng-isolate-scope">
-                                        <button type="button" class="button red_button" ng-disabled="disable" id="continue-btn" ng-hide="isloading">
-                                            立即存款
-                                        </button>
-                                        <button type="button" class="button red_button ng-hide" ng-disabled="disable" id="continue-btn" ng-show="isloading">
-                                            <div class="spinner">
-                                                <div class="dot1"></div>
-                                                <div class="dot2"></div>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- 溫馨提示 -->
-                                <div class="note">
-                                    <div class="tt"></div>
-                                    <ul>
-                                    </ul>
+                                    </button>
                                 </div>
                             </div>
-                            <!-- end ngIf: depositCtrl.stateOrder -->
-
-                            <!-- 確認訂單頁 -->
-                            <!-- ngIf: depositCtrl.stateConfirm -->
-
-
-                            <!--online-paysec-->
-                            <div ng-show="false" id="paysecDiv" class="ng-scope ng-hide">
-                                <form id="paysecForm" class="ng-pristine ng-valid">
-                                    <input type="hidden" name="token" value="">
-                                </form>
+                            <!-- 溫馨提示 -->
+                            <div class="note">
+                                <div class="tt"></div>
+                                <ul>
+                                </ul>
                             </div>
                         </div>
+                        <!-- end ngIf: depositCtrl.stateOrder -->
+                        <!-- 確認訂單頁 -->
+                        <!-- ngIf: depositCtrl.stateConfirm -->
 
-                        <!-- 下方選項顯示 -->
-                        <div class="form_panel fixed_form_panel">
-                            <div class="panel_mask"></div>
-                            <div class="form">
-                            </div>
-
+                        <!--online-paysec-->
+                        <div ng-show="false" id="paysecDiv" class="ng-scope ng-hide">
+                            <form id="paysecForm" class="ng-pristine ng-valid">
+                                <input type="hidden" name="token" value="">
+                            </form>
                         </div>
+                    </div>
+                    <!--QQ支付-paysec-->
+                    <div style="display: none;" ui-view="qqpay" ng-if="(depositCtrl.method === 'qqpay' || depositCtrl.method === 'qqpay_paysec' || depositCtrl.method === 'qqpay_qaicash') &amp;&amp; !depositCtrl.fakeLightBox.show"
+                        class="ng-scope">
+                        <!-- 填寫訂單頁 -->
+                        <!-- ngIf: depositCtrl.stateOrder -->
+                        <div class="deposit_panel active ng-scope" ng-if="depositCtrl.stateOrder">
+                            <div class="enter_panel">
+                                <!-- 選擇QQ支付方式 -->
+                                <div id="opanqq" class="select_card box">
+                                    <div class="label ng-binding">支付通道</div>
+                                    <div class="flex show_panel" ng-click="depositCtrl.openPanel(true, 'qqpay')">
+                                        <div ng-show="!depositCtrl.checkedChannellist" class="">
+                                            <b class="ng-binding">请选择支付通道</b>
+                                            <!--<b>{{depositCtrl.method_mapping[depositCtrl.method]}}</b>-->
+                                            <i class="icon_d"></i>
+                                        </div>
+                                        <div ng-show="depositCtrl.checkedChannellist" class="ng-hide">
+                                            <b class="ng-binding">通道一</b>
+                                            <i class="icon_d"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="enter_p box">
+                                    <div class="label ng-binding">金额</div>
+                                    <!-- ngIf: depositCtrl.method == 'qqpay' -->
+                                    <div class="flex ng-scope" ng-if="depositCtrl.method == 'qqpay'">
+                                        <div number-input="" hint="'bank@please_enter' | translate" hint1="depositCtrl.limit.qqpay.min | currencyFix:0" hint2="'-'"
+                                            hint3="depositCtrl.limit.qqpay.max|currencyFix:0" hint4="'bank@please_enter1' | translate"
+                                            ngmodel="depositCtrl.amount" class="ng-isolate-scope">
+                                            <input type="tel" class="" placeholder="请输入20-3,000" ng-model="ngmodel">
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: depositCtrl.method == 'qqpay' -->
+                                    <!-- ngIf: depositCtrl.method == 'qqpay_paysec' -->
+                                    <!-- ngIf: depositCtrl.method == 'qqpay_qaicash' -->
+                                </div>
+                            </div>
+                            <div class="tip"></div>
+                            <div class="btn_p">
+                                <div btn="" btnclass="'red_button'" btntext="'member_bank_deposit@next' | translate" disable="!depositCtrl.amount" active=""
+                                    isloading="depositCtrl.lockBtn" goto="" clickfunc="depositCtrl.createOrder()" class="ng-isolate-scope">
+                                    <button type="button" class="button red_button" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-hide="isloading"
+                                        disabled="disabled">
+                                        立即存款
+                                    </button>
+                                    <button type="button" class="button red_button ng-hide" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-show="isloading"
+                                        disabled="disabled">
+                                        <div class="spinner">
+                                            <div class="dot1"></div>
+                                            <div class="dot2"></div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- 溫馨提示 -->
+                            <div class="note">
+                                <div class="tt"></div>
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end ngIf: depositCtrl.stateOrder -->
 
+                        <!-- 確認訂單頁 -->
+                        <!-- ngIf: depositCtrl.stateConfirm -->
+                    </div>
+                    <!-- 微信扫码 -->
+                    <div style="display: none;" ui-view="wechat" ng-if="(depositCtrl.method === 'wechat' || depositCtrl.method === 'wechat_paysec' || depositCtrl.method === 'wechat_qaicash') &amp;&amp; !depositCtrl.fakeLightBox.show"
+                        class="ng-scope">
+                        <!-- 填寫訂單頁 -->
+                        <!-- ngIf: depositCtrl.stateOrder -->
+                        <div class="deposit_panel active ng-scope" ng-if="depositCtrl.stateOrder">
+                            <div class="enter_panel">
+                                <!-- 選擇微信支付方式 -->
+                                <div id="opanWeChat" class="select_card box">
+                                    <div class="label ng-binding">支付通道</div>
+                                    <div class="flex show_panel" ng-click="depositCtrl.openPanel(true, 'wechat')">
+                                        <div ng-show="!depositCtrl.checkedChannellist" class="">
+                                            <b class="ng-binding">请选择支付通道</b>
+                                            <i class="icon_d"></i>
+                                        </div>
+                                        <div ng-show="depositCtrl.checkedChannellist" class="ng-hide">
+                                            <b class="ng-binding">通道二</b>
+                                            <i class="icon_d"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 金額 -->
+                                <div class="enter_p box">
+                                    <div class="label ng-binding">金额</div>
+                                    <!-- ngIf: depositCtrl.method == 'wechat' -->
+                                    <div class="flex ng-scope" ng-if="depositCtrl.method == 'wechat'">
+                                        <div number-input="" hint="'bank@please_enter' | translate" hint1="depositCtrl.limit.wechat.min | currencyFix:0" hint2="'-'"
+                                            hint3="depositCtrl.limit.wechat.max|currencyFix:0" hint4="'bank@please_enter1' | translate"
+                                            ngmodel="depositCtrl.amount" class="ng-isolate-scope">
+                                            <input type="tel" class="" placeholder="请输入20-1,000" ng-model="ngmodel">
+                                        </div>
+                                    </div>
+                                    <!-- end ngIf: depositCtrl.method == 'wechat' -->
+                                    <!-- ngIf: depositCtrl.method == 'wechat_paysec' -->
+                                    <!-- ngIf: depositCtrl.method == 'wechat_qaicash' -->
+                                </div>
+                            </div>
+                            <div class="tip"></div>
+                            <div class="btn_p">
+                                <div btn="" btnclass="'red_button'" btntext="'member_bank_deposit@next' | translate" disable="" active="" isloading="depositCtrl.lockBtn"
+                                    goto="" clickfunc="depositCtrl.createOrder()" class="ng-isolate-scope">
+                                    <button type="button" class="button red_button" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-hide="isloading">
+                                        立即存款
+                                    </button>
+                                    <button type="button" class="button red_button ng-hide" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-show="isloading">
+                                        <div class="spinner">
+                                            <div class="dot1"></div>
+                                            <div class="dot2"></div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- 溫馨提示 -->
+                            <div class="note">
+                                <div class="tt"></div>
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end ngIf: depositCtrl.stateOrder -->
 
-                        
-                        <a href="vwin.html" class="deposit_tip ng-binding ng-scope">存款须知</a>
+                        <!-- 確認訂單頁 -->
+                        <!-- ngIf: depositCtrl.stateConfirm -->
+                    </div>
+                    <!-- 比特币 -->
+                    <div style="display: none;" ui-view="bitcoin" ng-if="depositCtrl.method === 'bitcoin' &amp;&amp; !depositCtrl.fakeLightBox.show"
+                        class="ng-scope">
+                        <!-- 填寫訂單頁 -->
+                        <!-- ngIf: depositCtrl.stateOrder -->
+                        <div class="deposit_panel active ng-scope" ng-if="depositCtrl.stateOrder">
+                            <div class="enter_panel">
+                                <!-- 金額 -->
+                                <div class="enter_p box">
+                                    <div class="label ng-binding">金额</div>
+                                    <div class="flex">
+                                        <div number-input="" hint="'bank@please_enter' | translate" hint1="depositCtrl.limit.bitcoin.min | currencyFix:0" hint2="'-'"
+                                            hint3="depositCtrl.limit.bitcoin.max|currencyFix:0" hint4="'bank@please_enter1' | translate"
+                                            ngmodel="depositCtrl.amount" class="ng-isolate-scope">
+                                            <input type="tel" class="" placeholder="请输入100-50,000" ng-model="ngmodel">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip"></div>
+                            <div class="btn_p">
+                                <div btn="" btnclass="'red_button'" btntext="'member_bank_deposit@next' | translate" disable="!depositCtrl.amount" active=""
+                                    isloading="depositCtrl.lockBtn" goto="" clickfunc="depositCtrl.createOrder()" class="ng-isolate-scope">
+                                    <button type="button" class="button red_button" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-hide="isloading"
+                                        disabled="disabled">
+                                        立即存款
+                                    </button>
+                                    <button type="button" class="button red_button ng-hide" ng-disabled="disable" id="continue-btn" ng-click="btnclick()" ng-show="isloading"
+                                        disabled="disabled">
+                                        <div class="spinner">
+                                            <div class="dot1"></div>
+                                            <div class="dot2"></div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- 溫馨提示 -->
+                            <div class="note">
+                                <div class="tt"></div>
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end ngIf: depositCtrl.stateOrder -->
+                        <!-- 確認訂單頁 -->
+                        <!-- ngIf: depositCtrl.stateConfirm -->
                     </div>
 
 
 
+
+                    <!-- 下方提示 -->
+                    <div id="form_panel" class="form_panel fixed_form_panel">
+                        <div class="panel_mask"></div>
+                        <div class="form">
+                            <!-- 支付通道 -->
+                            <div id="payment" class="card_list_panel ng-scope">
+                                <div class="card_list_hd ng-binding">请选择支付通道
+                                    <a href="javascript:" class="close_btn close"></a>
+                                </div>
+                                <ul class="card_list_bd">
+                                    <li class="item_card ng-scope">
+                                        <span class="ng-binding">通道一</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <span class="ng-binding">通道二</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <span class="ng-binding">通道三</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 选择银行卡 -->
+                            <div id="bank" class="card_list_panel ng-scope">
+                                <div class="card_list_hd ng-binding">请选择银行
+                                    <a href="javascript:" class="close_btn close"></a>
+                                </div>
+                                <ul class="card_list_bd">
+                                    <li class="item_card ng-scope">
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-023.png">
+                                        <span class="ng-binding">广发银行</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-007.png">
+                                        <span class="ng-binding">中国邮政储蓄银行</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-014.png">
+                                        <span class="ng-binding">华夏银行</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-018.png">
+                                        <span class="ng-binding">平安银行</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-013.png">
+                                        <span class="ng-binding">兴业银行</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-010.png">
+                                        <span class="ng-binding">中国民生银行</span>
+                                    </li>
+                                    <!-- end ngRepeat: item in depositCtrl.banks | orderBy:'priority' -->
+                                    <li class="item_card ng-scope">
+                                        <!-- ngIf: depositCtrl.lang == 'zh-cn' || depositCtrl.lang == 'en-us' -->
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-003.png">
+                                        <!-- end ngIf: depositCtrl.lang == 'zh-cn' || depositCtrl.lang == 'en-us' -->
+                                        <span class="ng-binding">农业银行</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-005.png">
+                                        <span class="ng-binding">中国银行</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-002.png">
+                                        <span class="ng-binding">建设银行</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <img alt="" class="ng-scope" src="../content/images/bank/001-001.png">
+                                        <span class="ng-binding">工商银行</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 快捷支付 支付通道 -->
+                            <div id="box" class="card_list_panel ng-scope">
+                                <div class="card_list_hd ng-binding">请选择支付通道
+                                    <a href="javascript:" class="close_btn close"></a>
+                                </div>
+                                <ul class="card_list_bd">
+                                    <li class="item_card ng-scope">
+                                        <span class="ng-binding">通道二</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- QQ扫码 支付通道 -->
+                            <div id="qq" class="card_list_panel ng-scope">
+                                <div class="card_list_hd ng-binding">请选择支付通道
+                                    <a href="javascript:" class="close_btn close"></a>
+                                </div>
+                                <ul class="card_list_bd">
+                                    <li class="item_card ng-scope">
+                                        <span class="ng-binding">通道一</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <span class="ng-binding">通道二</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <span class="ng-binding">通道三</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 微信扫码 支付通道 -->
+                            <div id="WeChat" class="card_list_panel ng-scope">
+                                <div class="card_list_hd ng-binding">请选择支付通道
+                                    <a href="javascript:" class="close_btn close"></a>
+                                </div>
+                                <ul class="card_list_bd">
+                                    <li class="item_card ng-scope">
+                                        <span class="ng-binding">通道一</span>
+                                    </li>
+                                    <li class="item_card ng-scope">
+                                        <span class="ng-binding">通道二</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <a href="vwin.html" class="deposit_tip ng-binding ng-scope">存款须知</a>
                 </div>
+
+
+
             </div>
+        </div>
+        <script src="../content/js/rem.js"></script>
+        <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+        <script src="../content/js/ft-carousel.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../content/js/swiper-3.4.2.min.js"></script>
+        <script src="../content/js/js.js"></script>
 
-           
 
-    </body>
+</body>
 
 </html>
