@@ -16,38 +16,41 @@
     <link rel="stylesheet" href="../content/css/account.css">
     <link rel="stylesheet" href="../content/css/ft-carousel.css">
     <link rel="stylesheet" href="../content/css/swiper-3.4.2.min.css">
-   <!-- <link rel="stylesheet" href="../content/css/custom_rd.css">-->
-	<style>
-		.swiper-pagination{
-			position: absolute;
-			right: 10px;
-			bottom: 30px!important;
-			text-align: right;
-		}
-		.swiper-pagination-bullet-active{
-		    background-color: #fff!important;
-			-webkit-transform: scale(1)!important;
-			-moz-transform: scale(1)!important;
-			-ms-transform: scale(1)!important;
-			-o-transform: scale(1)!important;
-			transform: scale(1)!important;
-		}
-		.swiper-pagination-bullet{
-		    text-indent: -9999px;
-			width: 8px;
-			height: 8px;
-			background-color: rgba(0,0,0,.5);
-			border-radius: 50%;
-			-webkit-transform: scale(.7);
-			-moz-transform: scale(.7);
-			-ms-transform: scale(.7);
-			-o-transform: scale(.7);
-			transform: scale(.7);
-	}
-	</style>
+    <!-- <link rel="stylesheet" href="../content/css/custom_rd.css">-->
+    <style>
+        .swiper-pagination {
+            position: absolute;
+            right: 10px;
+            bottom: 30px!important;
+            text-align: right;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #fff!important;
+            -webkit-transform: scale(1)!important;
+            -moz-transform: scale(1)!important;
+            -ms-transform: scale(1)!important;
+            -o-transform: scale(1)!important;
+            transform: scale(1)!important;
+        }
+
+        .swiper-pagination-bullet {
+            text-indent: -9999px;
+            width: 8px;
+            height: 8px;
+            background-color: rgba(0, 0, 0, .5);
+            border-radius: 50%;
+            -webkit-transform: scale(.7);
+            -moz-transform: scale(.7);
+            -ms-transform: scale(.7);
+            -o-transform: scale(.7);
+            transform: scale(.7);
+        }
+    </style>
+
     <body style="font-size: 12px;">
         <div class="layout">
-            
+
             <div class="ng-scope">
                 <div>
                     <!-- 顶部  -->
@@ -63,28 +66,28 @@
 
                                     <!-- ngRepeat: lang in listLang track by $index -->
                                     <li class="item_option">
-                                        <img class="flag"  alt="th" src="../content/images/leng/ch.png">
-                                        <span class="name ng-binding" >简中</span>
+                                        <img class="flag" alt="th" src="../content/images/leng/ch.png">
+                                        <span class="name ng-binding">简中</span>
                                     </li>
                                     <!-- end ngRepeat: lang in listLang track by $index -->
                                     <li class="item_option">
-                                        <img class="flag"  alt="th" src="../content/images/leng/en.png">
-                                        <span class="name ng-binding" >English</span>
+                                        <img class="flag" alt="th" src="../content/images/leng/en.png">
+                                        <span class="name ng-binding">English</span>
                                     </li>
                                     <!-- end ngRepeat: lang in listLang track by $index -->
                                     <li class="item_option">
-                                        <img class="flag"  alt="th" src="../content/images/leng/vn.png">
-                                        <span class="name ng-binding" >Tiếng Việt</span>
+                                        <img class="flag" alt="th" src="../content/images/leng/vn.png">
+                                        <span class="name ng-binding">Tiếng Việt</span>
                                     </li>
                                     <!-- end ngRepeat: lang in listLang track by $index -->
                                     <li class="item_option">
-                                        <img class="flag"  alt="th" src="../content/images/leng/th.png">
-                                        <span class="name ng-binding" >ภาษาไทย</span>
+                                        <img class="flag" alt="th" src="../content/images/leng/th.png">
+                                        <span class="name ng-binding">ภาษาไทย</span>
                                     </li>
                                 </ul>
                             </div>
                             <!-- ngIf: title == '' -->
-                            <div class="logo" ></div>
+                            <div class="logo"></div>
                             <!-- end ngIf: title == '' -->
                             <!--<img class="logo"   />-->
                             <!-- ngIf: title != '' -->
@@ -94,16 +97,16 @@
                 </div>
                 <!-- banner -->
                 <div class="banner">
-				
-					<div class="swiper-container">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"><img src="../content/images/banner1.jpg" /></div>
-							<div class="swiper-slide"><img src="../content/images/banner2.jpg" /></div>
-							<div class="swiper-slide"><img src="../content/images/banner3.jpg" /></div>
-						</div>
-						<div class="swiper-pagination"></div>
-					</div>
-					
+
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="../content/images/banner1.jpg" /></div>
+                            <div class="swiper-slide"><img src="../content/images/banner2.jpg" /></div>
+                            <div class="swiper-slide"><img src="../content/images/banner3.jpg" /></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
                     <div class="example" style="display:none;">
                         <div class="ft-carousel" id="carousel_1">
                             <ul class="carousel-inner">
@@ -119,9 +122,9 @@
                             </ul>
                         </div>
                     </div>
-					
+
                     <!-- 公告栏 -->
-                    <a class="scrolling_text" >
+                    <a class="scrolling_text">
                         <div class="tt ng-binding">公告栏：</div>
                         <marquee id="marq_news" class="text ng-binding" scrollamount="4">
                             《BBIN波音馆维护通知》BBIN波音馆将于每周三09:00~12:00例行维护，维护期间将停止所有游戏与转账服务，造成不便敬请见谅，若有问题请联系在线客服，谢谢。&nbsp;&nbsp;&nbsp;￥支付宝转银行卡 维护公告￥支付宝转银行卡渠道现正进行维护，造成不便敬请见谅，如有任何问题请与在线客服联系，谢谢！&nbsp;&nbsp;&nbsp;《沙巴体育维护公告》沙巴体育将于每周四或五下午进行例行维护，维护时间将于当周公告，详细维护时间请留意公告讯息。&nbsp;&nbsp;&nbsp;《Game
@@ -303,7 +306,7 @@
             <div class="footer ng-isolate-scope">
                 <div class="content box">
                     <div class="item_nav active" href="index.html">
-                        <a  href="index.html">
+                        <a href="index.html">
                             <i class="icon_home"></i>
                             <span class="fixText">
                                 <span class="ng-binding">首页</span>
@@ -311,7 +314,7 @@
                         </a>
                     </div>
                     <div class="item_nav" ui-sref-active="active">
-                        <a  href="promotion.html">
+                        <a href="promotion.html">
                             <i class="icon_youhui"></i>
                             <span class="fixText">
                                 <span class="ng-binding">优惠</span>
@@ -324,7 +327,7 @@
                         </a>
                     </div>
                     <div class="item_nav">
-                        <a  href="bank.html">
+                        <a href="bank.html">
                             <i class="icon_qianbao"></i>
                             <span class="fixText">
                                 <span class="ng-binding">钱包</span>
@@ -343,37 +346,39 @@
 
 
             <!-- 登录 -->
- <div id="loginPanel" class="form_panel fixed_form_panel">
-			<div class="panel_mask" style="display: block;"></div>
-			<div class="form">
-				<form ng-init="showPwd='password'" class="ng-valid ng-dirty">
-					<div class="form_group">
-						<input type="text" id="login_username" name="userName" placeholder="用户名" class="ng-pristine ng-valid">
-					</div>
-					<div class="form_group pwd_group">
-						<input type="text" placeholder="密码" class="ng-valid ng-dirty passwordtxt" style="display:none;">
-						<input type="password" name="password" id="login_password" placeholder="密码" class="ng-valid ng-dirty password1231">
-						<a href="javascript:" class="check_btn material-icons ng-binding" ></a>
-					</div>
-					<!--<div class="form_group code_group">
+            <div id="loginPanel" class="form_panel fixed_form_panel">
+                <div class="panel_mask" style="display: block;"></div>
+                <div class="form">
+                    <form ng-init="showPwd='password'" class="ng-valid ng-dirty">
+                        <div class="form_group">
+                            <input type="text" id="login_username" name="userName" placeholder="用户名" class="ng-pristine ng-valid">
+                        </div>
+                        <div class="form_group pwd_group">
+                            <input type="text" placeholder="密码" class="ng-valid ng-dirty passwordtxt" style="display:none;">
+                            <input type="password" name="password" id="login_password" placeholder="密码" class="ng-valid ng-dirty password1231">
+                            <a href="javascript:" class="check_btn material-icons ng-binding"></a>
+                        </div>
+                        <!--<div class="form_group code_group">
 						<input type="text" name="code" placeholder="验证码" />
 						<div class="code_box"><img src="styles/image/code.png" alt="" /></div>
 					</div>-->
-					<div class="form_tip ng-binding" ></div>
-					<div class="form_ctl">
-						<label class="label ng-binding">
+                        <div class="form_tip ng-binding"></div>
+                        <div class="form_ctl">
+                            <label class="label ng-binding">
 							<i class="form_ckeckbox active" >
 								<input type="checkbox" for="c1" ng-checked="mainCtrl.allowLogAccountName" checked="checked">
 							</i>
 							记住用户名
 						</label>
-						<a href="forgetpw.html" class="fr forget_pwd ng-binding" >找回密码</a>
-					</div>
-					<div id="login" btn="btn" btnclass="'submit'" btntext="'index@login'|translate" disable="!mainCtrl.accountName.value || !mainCtrl.accountPassword.value" active="" isloading="mainCtrl.isLoading" goto="" clickfunc="mainCtrl.loginSubmit()" class="ng-isolate-scope" style="visibility: visible;">
-            <button type="button" class="button submit"  id="continue-btn">
+                            <a href="forgetpw.html" class="fr forget_pwd ng-binding">找回密码</a>
+                        </div>
+                        <div id="login" btn="btn" btnclass="'submit'" btntext="'index@login'|translate" disable="!mainCtrl.accountName.value || !mainCtrl.accountPassword.value"
+                            active="" isloading="mainCtrl.isLoading" goto="" clickfunc="mainCtrl.loginSubmit()" class="ng-isolate-scope"
+                            style="visibility: visible;">
+                            <button type="button" class="button submit" id="continue-btn">
                 登录
             </button>
-            <!-- 判断密码显示的眼睛
+                            <!-- 判断密码显示的眼睛
             <button type="button" class="button submit ng-hide" ng-disabled="disable" id="continue-btn"  disabled="disabled">
                 <div class="spinner">
                     <div class="dot1"></div>
@@ -381,16 +386,16 @@
                 </div>
             </button>
             -->
-        </div>
-        
-                            <!--<button class="submit"></button>-->
-                        </form>
-                        <div class="login_foot ng-binding">没有账号？<a  class="ng-binding" href="register.html">请新建一个账号</a></div>
-                    </div>
-        
-			</div>
-				
-				
+                        </div>
+
+                        <!--<button class="submit"></button>-->
+                    </form>
+                    <div class="login_foot ng-binding">没有账号？<a class="ng-binding" href="register.html">请新建一个账号</a></div>
+                </div>
+
+            </div>
+
+
             <!--loading-->
             <div class="loading_wrap loadingBtn loginSuccessAnim" id="login_last" style="display: none;">
                 <div class="shape">
@@ -404,7 +409,7 @@
             </div>
         </div>
 
-       
+
 
 
 
@@ -415,16 +420,39 @@
         <script src="../content/js/rem.js"></script>
         <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
         <script src="../content/js/ft-carousel.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../content/js/swiper-3.4.2.min.js"></script>
+        <script src="../content/js/swiper-3.4.2.min.js"></script>
         <script src="../content/js/js.js"></script>
         <script src="../content/js/login.js"></script>
-		<script> 
-			var mySwiper = new Swiper('.swiper-container', {
-				loop : true,
-				autoplay: 3000,
-				pagination: '.swiper-pagination'
-			})
-		</script>
+        <script>
+            var mySwiper = new Swiper('.swiper-container', {
+                loop: true,
+                autoplay: 3000,
+                pagination: '.swiper-pagination'
+            })
+
+            $(document).ready(function () {
+                var notices = {};
+
+                $.ajax({
+                    type: "post",
+                    url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+                    dataType: "json",
+                    async: false,
+                    data: {
+                        Method: "Notice",
+                        Type: "105",
+                    },
+                    success: function (data) {
+                        if (data.Code != 0) {
+                            alert(data.Message);
+                            return false;
+                        }
+                        notices = data.Data;
+                    }
+                });
+
+            });
+        </script>
     </body>
 
 </html>

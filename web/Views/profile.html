@@ -300,6 +300,93 @@
 <script src="../content/js/ft-carousel.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="../content/js/swiper-3.4.2.min.js"></script>
 <script src="../content/js/js.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var profile = {};
+
+        $.ajax({
+			type: "post",
+			url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+			dataType: "json",
+			async:false,
+			data : {
+				Method:"UserInfo",
+				Account: "demo01",
+			},
+			success: function (data) {
+				if(data.Code != 0){
+					alert(data.Message);
+					return false;
+				}
+				profile = data.Data;
+			}
+		});
+
+        $('#update-user-info').on('click', function updateUserInfo(){
+            $.ajax({
+                type: "post",
+                url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+                dataType: "json",
+                async:false,
+                data : {
+                    Method:"EditInfo",
+                    Account: "demo01",
+                    Birthday: "1990-01-01",
+                    Gender: "0",
+                    Code: "637000",
+                    Address: "河南 南岸",
+
+                },
+                success: function (data) {
+                    if(data.Code != 0){
+                        alert(data.Message);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        $('#send-user-email').on('click', function updateUserInfo(){
+            $.ajax({
+                type: "post",
+                url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+                dataType: "json",
+                async:false,
+                data : {
+                    Method: "SMAILV",
+                    Vcode: "2545",
+                    Mail: "asd4545@163.com",
+                },
+                success: function (data) {
+                    if(data.Code != 0){
+                        alert(data.Message);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        $('#send-user-sms').on('click', function updateUserInfo(){
+            $.ajax({
+                type: "post",
+                url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+                dataType: "json",
+                async:false,
+                data : {
+                    Method: "SSMSV",
+                    Vcode: "2545",
+                    Phone: "18888888888",
+                },
+                success: function (data) {
+                    if(data.Code != 0){
+                        alert(data.Message);
+                        return false;
+                    }
+                }
+            });
+        });
+    });
+</script>
 </body>
 
 </html>

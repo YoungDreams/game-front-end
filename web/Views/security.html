@@ -1,4 +1,4 @@
-<html  class="ng-scope">
+<html class="ng-scope">
 
 <head>
     </style>
@@ -19,174 +19,223 @@
     <!--<link rel="stylesheet" href="../content/css/reset.css" />-->
     <link rel="stylesheet" href="../content/css/recommend.css">
 </head>
-    <body style="font-size: 12px;" class="bg_gray">
-        <div class="layout">
+
+<body style="font-size: 12px;" class="bg_gray">
+    <div class="layout">
+        <!-- uiView:  -->
+        <div ui-view="" class="ng-scope">
             <!-- uiView:  -->
             <div ui-view="" class="ng-scope">
                 <!-- uiView:  -->
                 <div ui-view="" class="ng-scope">
-                    <!-- uiView:  -->
-                    <div ui-view="" class="ng-scope">
-                        <div class="layout ng-scope">
-                            <!-- 上面空間 開始 -->
-                            <div class="flex_head ng-isolate-scope" header-back="" headerclass="'bg_red'" title="'account_security_info@title'|translate"
-                                backfn="securityInfoCtrl.back()" rightclass="'msg'" righttext="" rightfn="securityInfoCtrl.gotoUrl()">
-                                <div class="header bg_red">
-                                        <a href="javascript:history.back()" class="back ng-binding">返回</a>
-                                    <h3 class="title ng-binding">账号安全</h3>
-                                    <a href="#" class="msg"></a>
+                    <div class="layout ng-scope">
+                        <!-- 上面空間 開始 -->
+                        <div class="flex_head ng-isolate-scope" header-back="" headerclass="'bg_red'" title="'account_security_info@title'|translate"
+                            backfn="securityInfoCtrl.back()" rightclass="'msg'" righttext="" rightfn="securityInfoCtrl.gotoUrl()">
+                            <div class="header bg_red">
+                                <a href="javascript:history.back()" class="back ng-binding">返回</a>
+                                <h3 class="title ng-binding">账号安全</h3>
+                                <a href="#" class="msg"></a>
+                            </div>
+                        </div>
+                        <!-- 上面空間 結束 -->
+
+                        <!-- ngIf: securityInfoCtrl.dataReady -->
+                        <div class="container ng-scope">
+                            <div class="safety_degree degree2" degree="85">
+                                <div class="num">85</div>
+                                <div class="tip">请尽快设置提款密码，安全问题</div>
+                            </div>
+
+                            <div class="account_panel">
+
+                                <!--登陆账号-->
+                                <div class="item_option">
+                                    <div class="option_k ng-binding">登陆账号</div>
+                                    <div class="option_v c_gray ng-binding">heking520</div>
+                                </div>
+
+                                <!--最后登陆时间-->
+                                <div class="item_option">
+                                    <div class="option_k ng-binding">最后登陆时间</div>
+                                    <div class="option_v c_gray ng-binding">2017/12/18 13:40:33 GMT+8</div>
                                 </div>
                             </div>
-                            <!-- 上面空間 結束 -->
 
-                            <!-- ngIf: securityInfoCtrl.dataReady -->
-                            <div class="container ng-scope">
-                                <div class="safety_degree degree2" degree="85">
-                                    <div class="num">85</div>
-                                    <div class="tip">请尽快设置提款密码，安全问题</div>
+                            <div class="account_panel">
+
+                                <!--修改密码-->
+                                <div id="opanedit" class="item_option edit_option">
+                                    <div class="option_k ng-binding">修改密码</div>
+                                    <div class="option_v show_panel">&nbsp;</div>
                                 </div>
 
-                                <div class="account_panel">
-
-                                    <!--登陆账号-->
-                                    <div class="item_option">
-                                        <div class="option_k ng-binding">登陆账号</div>
-                                        <div class="option_v c_gray ng-binding">heking520</div>
-                                    </div>
-
-                                    <!--最后登陆时间-->
-                                    <div class="item_option">
-                                        <div class="option_k ng-binding">最后登陆时间</div>
-                                        <div class="option_v c_gray ng-binding">2017/12/18 13:40:33 GMT+8</div>
-                                    </div>
+                                <!--提款密码-->
+                                <div id="opantikuan" class="item_option edit_option">
+                                    <div class="option_k ng-binding">提款密码</div>
+                                    <!-- ngIf: securityInfoCtrl.securityStatus.Withdraw.status -->
+                                    <div class="option_v show_panel c_gray ng-binding ng-scope">已设置</div>
+                                    <!-- end ngIf: securityInfoCtrl.securityStatus.Withdraw.status -->
+                                    <!-- ngIf: !securityInfoCtrl.securityStatus.Withdraw.status -->
                                 </div>
 
-                                <div class="account_panel">
+                                <!--安全问题-->
+                                <div id="opansrcurity" class="item_option edit_option">
+                                    <div class="option_k ng-binding">安全问题</div>
+                                    <!-- ngIf: securityInfoCtrl.securityStatus.Question.status -->
+                                    <!-- ngIf: !securityInfoCtrl.securityStatus.Question.status -->
+                                    <div class="option_v show_panel c_red ng-binding ng-scope">未设置</div>
+                                    <!-- end ngIf: !securityInfoCtrl.securityStatus.Question.status -->
+                                </div>
 
-                                    <!--修改密码-->
-                                    <div id="opanedit" class="item_option edit_option">
-                                        <div class="option_k ng-binding">修改密码</div>
-                                        <div class="option_v show_panel">&nbsp;</div>
-                                    </div>
-
-                                    <!--提款密码-->
-                                    <div  id="opantikuan" class="item_option edit_option">
-                                        <div class="option_k ng-binding">提款密码</div>
-                                        <!-- ngIf: securityInfoCtrl.securityStatus.Withdraw.status -->
-                                        <div class="option_v show_panel c_gray ng-binding ng-scope">已设置</div>
-                                        <!-- end ngIf: securityInfoCtrl.securityStatus.Withdraw.status -->
-                                        <!-- ngIf: !securityInfoCtrl.securityStatus.Withdraw.status -->
-                                    </div>
-
-                                    <!--安全问题-->
-                                    <div  id="opansrcurity" class="item_option edit_option">
-                                        <div class="option_k ng-binding">安全问题</div>
-                                        <!-- ngIf: securityInfoCtrl.securityStatus.Question.status -->
-                                        <!-- ngIf: !securityInfoCtrl.securityStatus.Question.status -->
-                                        <div class="option_v show_panel c_red ng-binding ng-scope">未设置</div>
-                                        <!-- end ngIf: !securityInfoCtrl.securityStatus.Question.status -->
-                                    </div>
-
-                                    <!--安全问题 另開新頁-->
-                                    <!--<div class="item_option edit_option" >
+                                <!--安全问题 另開新頁-->
+                                <!--<div class="item_option edit_option" >
                 <div class="option_k" ></div>
                 <div class="option_v show_panel c_gray"  ></div>
                 <div class="option_v show_panel c_red"  ></div>
             </div>-->
+                            </div>
+                        </div>
+                        <!-- end ngIf: securityInfoCtrl.dataReady -->
+                    </div>
+
+                    <!-- 修改密码 -->
+                    <div id="edit" class="form_panel fixed_form_panel">
+                        <div class="panel_mask"></div>
+                        <div class="login_form">
+                            <form class="ng-pristine ng-valid">
+                                <div class="form_group pwd_group">
+                                    <input id="pwd1" type="password" name="password" placeholder="原密码" class="ng-pristine ng-valid">
+                                    <a href="javascript://" id="pwd1_a" class="check_btn material-icons"></a>
                                 </div>
-                            </div>
-                            <!-- end ngIf: securityInfoCtrl.dataReady -->
+                                <div class="form_group pwd_group">
+                                    <input id="pwd2" type="password" name="newPassword" placeholder="新密码" class="ng-pristine ng-valid">
+                                    <a href="javascript://" id="pwd2_a" class="check_btn material-icons"></a>
+                                </div>
+                                <div class="form_tip ng-binding">旧密码不正确</div>
+
+                                <button class="red_button ng-binding disable_button">提交</button>
+                                <button type="button" class="gray_button close ng-binding cancel_mask">取消</button>
+                            </form>
                         </div>
+                    </div>
 
-                        <!-- 修改密码 -->
-                        <div id="edit" class="form_panel fixed_form_panel">
-                            <div class="panel_mask"></div>
-                            <div class="login_form">
-                                <form class="ng-pristine ng-valid">
-                                    <div class="form_group pwd_group">
-                                        <input id="pwd1" type="password" name="password" placeholder="原密码" 
-                                            class="ng-pristine ng-valid">
-                                        <a href="javascript://" id="pwd1_a" class="check_btn material-icons"></a>
+                    <!-- 设置提款密码 -->
+                    <div id="tikuan" class="form_panel fixed_form_panel">
+                        <div class="panel_mask"></div>
+                        <div class="login_form">
+                            <!-- ngIf: securityInfoCtrl.withdrawPasswordData.page_flow == 'new' -->
+
+                            <!-- ngIf: securityInfoCtrl.withdrawPasswordData.page_flow == 'update' -->
+                            <form ng-if="securityInfoCtrl.withdrawPasswordData.page_flow == 'update'" class="ng-scope ng-pristine ng-valid">
+                                <input type="hidden">
+                                <div class="form_top_tip ng-binding" ng-bind="'account_security_info@withdraw_mask_form_top_tip'|translate">我们已发送验证码到这个手机</div>
+                                <div class="form_top_tip c_red ng-binding" ng-bind="securityInfoCtrl.withdrawPasswordData.maskPhone">18113****20</div>
+                                <div class="phone_code_group">
+                                    <div class="form_group">
+                                        <input type="text" name="phoneCode" ng-model="securityInfoCtrl.withdrawPasswordData.code" ng-change="securityInfoCtrl.withdrawPasswordData.CheckCode()"
+                                            placeholder="请输入验证码" class="ng-pristine ng-valid">
+                                        <!--<div number-input hint="'account_security_info@withdraw_mask_phoneCode' | translate" ngmodel="securityInfoCtrl.withdrawPasswordData.code" length="6" ng-change="securityInfoCtrl.withdrawPasswordData.CheckCode()"></div>-->
                                     </div>
-                                    <div class="form_group pwd_group">
-                                        <input id="pwd2" type="password" name="newPassword" placeholder="新密码" 
-                                            class="ng-pristine ng-valid">
-                                        <a href="javascript://" id="pwd2_a" class="check_btn material-icons"></a>
-                                    </div>
-                                    <div class="form_tip ng-binding">旧密码不正确</div>
-
-                                    <button class="red_button ng-binding disable_button">提交</button>
-                                    <button type="button" class="gray_button close ng-binding cancel_mask">取消</button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <!-- 设置提款密码 -->
-                        <div id="tikuan" class="form_panel fixed_form_panel">
-                            <div class="panel_mask"></div>
-                            <div class="login_form">
-                                <!-- ngIf: securityInfoCtrl.withdrawPasswordData.page_flow == 'new' -->
-                        
-                                <!-- ngIf: securityInfoCtrl.withdrawPasswordData.page_flow == 'update' --><form ng-if="securityInfoCtrl.withdrawPasswordData.page_flow == 'update'" class="ng-scope ng-pristine ng-valid">
-                                    <input type="hidden">
-                                    <div class="form_top_tip ng-binding" ng-bind="'account_security_info@withdraw_mask_form_top_tip'|translate">我们已发送验证码到这个手机</div>
-                                    <div class="form_top_tip c_red ng-binding" ng-bind="securityInfoCtrl.withdrawPasswordData.maskPhone">18113****20</div>
-                                    <div class="phone_code_group">
-                                        <div class="form_group">
-                                            <input type="text" name="phoneCode" ng-model="securityInfoCtrl.withdrawPasswordData.code" ng-change="securityInfoCtrl.withdrawPasswordData.CheckCode()" placeholder="请输入验证码" class="ng-pristine ng-valid">
-                                            <!--<div number-input hint="'account_security_info@withdraw_mask_phoneCode' | translate" ngmodel="securityInfoCtrl.withdrawPasswordData.code" length="6" ng-change="securityInfoCtrl.withdrawPasswordData.CheckCode()"></div>-->
-                                        </div>
-                                        <!-- ngIf: securityInfoCtrl.withdrawPasswordCountdown.type --><button class="red_button set_btn disable_button ng-binding ng-scope" type="button" ng-if="securityInfoCtrl.withdrawPasswordCountdown.type">
+                                    <!-- ngIf: securityInfoCtrl.withdrawPasswordCountdown.type --><button class="red_button set_btn disable_button ng-binding ng-scope" type="button" ng-if="securityInfoCtrl.withdrawPasswordCountdown.type">
                                             获取验证码
                                             <timer interval="1000" countdown="securityInfoCtrl.withdrawPasswordCountdown.second" class="ng-binding ng-isolate-scope"><span class="ng-binding ng-scope">152</span></timer>
-                                        </button><!-- end ngIf: securityInfoCtrl.withdrawPasswordCountdown.type -->
-                                        <!-- ngIf: !securityInfoCtrl.withdrawPasswordCountdown.type -->
-                                    </div>
-                                    <div class="form_tip ng-binding" ng-bind="'account_security_info@withdraw_mask_form_tip_1'|translate">旧密码不正确</div>
-                        
-                                    <button class="red_button ng-binding disable_button" ng-class="{'disable_button' : !securityInfoCtrl.withdrawPasswordData.code_valid}" ng-click="securityInfoCtrl.withdrawPasswordData.code_valid &amp;&amp; securityInfoCtrl.withdrawPasswordSubmit(securityInfoCtrl.withdrawPasswordData.page_flow)" ng-bind="'account_security_info@withdraw_mask_submit_1'|translate">下一步</button>
-                                    <button type="button" class="gray_button close ng-binding  cancel_mask" >取消</button>
-                                </form><!-- end ngIf: securityInfoCtrl.withdrawPasswordData.page_flow == 'update' -->
-                            </div>
-                        </div>
+                                        </button>
+                                    <!-- end ngIf: securityInfoCtrl.withdrawPasswordCountdown.type -->
+                                    <!-- ngIf: !securityInfoCtrl.withdrawPasswordCountdown.type -->
+                                </div>
+                                <div class="form_tip ng-binding" ng-bind="'account_security_info@withdraw_mask_form_tip_1'|translate">旧密码不正确</div>
 
-                        <!-- 安全问题 -->
-                        <div id="srcurity" class="form_panel fixed_form_panel">
-                            <div class="panel_mask"></div>
-                            <div class="login_form">
-                                <form class="ng-pristine ng-valid">
-                                    <div class="form_group pwd_group">
-                                        <select  opt="" class="ng-pristine ng-valid">
+                                <button class="red_button ng-binding disable_button" ng-class="{'disable_button' : !securityInfoCtrl.withdrawPasswordData.code_valid}"
+                                    ng-click="securityInfoCtrl.withdrawPasswordData.code_valid &amp;&amp; securityInfoCtrl.withdrawPasswordSubmit(securityInfoCtrl.withdrawPasswordData.page_flow)"
+                                    ng-bind="'account_security_info@withdraw_mask_submit_1'|translate">下一步</button>
+                                <button type="button" class="gray_button close ng-binding  cancel_mask">取消</button>
+                            </form>
+                            <!-- end ngIf: securityInfoCtrl.withdrawPasswordData.page_flow == 'update' -->
+                        </div>
+                    </div>
+
+                    <!-- 安全问题 -->
+                    <div id="srcurity" class="form_panel fixed_form_panel">
+                        <div class="panel_mask"></div>
+                        <div class="login_form">
+                            <form class="ng-pristine ng-valid">
+                                <div class="form_group pwd_group">
+                                    <select opt="" class="ng-pristine ng-valid">
                                             <option value="" disabled="" class="ng-binding">请选择安全问题</option>
                                         </select>
-                                    </div>
-                                    <div class="form_group pwd_group">
-                                        <input type="text" name="daan"  placeholder="请输入答案" class="ng-pristine ng-valid">
-                                    </div>
-                                    <div class="form_tip ng-binding">请设置提款密码，并妥善保管</div>
+                                </div>
+                                <div class="form_group pwd_group">
+                                    <input type="text" name="daan" placeholder="请输入答案" class="ng-pristine ng-valid">
+                                </div>
+                                <div class="form_tip ng-binding">请设置提款密码，并妥善保管</div>
 
-                                    <button class="red_button ng-binding disable_button">提交</button>
-                                    <button type="button" class="gray_button close  cancel_mask">取消</button>
-                                </form>
-                            </div>
+                                <button class="red_button ng-binding disable_button">提交</button>
+                                <button type="button" class="gray_button close  cancel_mask">取消</button>
+                            </form>
                         </div>
-
-                        <!-- 成功提示 -->
-                        <!-- ngIf: securityInfoCtrl.message_panel.active -->
                     </div>
+
+                    <!-- 成功提示 -->
+                    <!-- ngIf: securityInfoCtrl.message_panel.active -->
                 </div>
             </div>
-   
+        </div>
 
 
 
-            <!-- js -->
-<script src="../content/js/rem.js"></script>
-<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-<script src="../content/js/ft-carousel.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="../content/js/swiper-3.4.2.min.js"></script>
-<script src="../content/js/js.js"></script>
 
-    </body>
+        <!-- js -->
+        <script src="../content/js/rem.js"></script>
+        <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+        <script src="../content/js/ft-carousel.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../content/js/swiper-3.4.2.min.js"></script>
+        <script src="../content/js/js.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var profile = {};
+
+                $.ajax({
+                    type: "post",
+                    url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+                    dataType: "json",
+                    async: false,
+                    data: {
+                        Method: "UserInfo",
+                        Account: "demo01",
+                    },
+                    success: function (data) {
+                        if (data.Code != 0) {
+                            alert(data.Message);
+                            return false;
+                        }
+                        profile = data.Data;
+                    }
+                });
+
+                $('#update-user-password').on('click', function updateUserInfo() {
+                    $.ajax({
+                        type: "post",
+                        url: 'http://demo.90909999.vip/PacketUserCenter.ashx',
+                        dataType: "json",
+                        async: false,
+                        data: {
+                            Method: "EditPassword",
+                            Account: "demo01",
+                            OldPassword: "123456",
+                            NewPassword: "a1234567",
+                        },
+                        success: function (data) {
+                            if (data.Code != 0) {
+                                alert(data.Message);
+                                return false;
+                            }
+                        }
+                    });
+                });
+            });
+
+        </script>
+</body>
 
 </html>
